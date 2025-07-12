@@ -285,207 +285,81 @@
 
     <!-- Page Title -->
     <div class="page-title">
-      <div class="breadcrumbs">
+        <div class="breadcrumbs">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
                 <a href="beranda.html"><i class="bi bi-house"></i> Beranda</a>
               </li>
               <li class="breadcrumb-item"><a href="#">Pasien dan Pengunjung</a></li>
-              <li class="breadcrumb-item active current">Pendaftaran Online Pasien</li>
+              <li class="breadcrumb-item active current">Alur DOnasi</li>
             </ol>
           </nav>
         </div>
       <div class="title-wrapper">
-        <h1>Pendaftaran Online Pasien</h1>    
+        <h1>Alur Donasi</h1>    
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Appointmnet Section -->
-    <section id="appointmnet" class="appointmnet section">
+    <!-- Services Section -->
+    <section id="services" class="services section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100"> 
+        <div class="last-updated text-center"><b>BERLAKU DARI 27 DESEMBER 2022 15:05</b></div>       
+        <div class="services-tabs">
+          <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
+              <div class="row gy-4">
+                
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <!-- Appointment Info -->
-          <div class="col-lg-6">
-            <div class="appointment-info">
-              <h3>Pendaftaran Online Mudah &amp; Cepat</h3>
-              <p class="mb-4">Buat janji temu Anda hanya dengan beberapa langkah mudah. Tenaga kesehatan profesional kami siap memberikan perawatan medis terbaik sesuai kebutuhan Anda.</p>
-
-              <div class="info-items">
-                <div class="info-item d-flex align-items-center mb-3" data-aos="fade-up" data-aos-delay="200">
-                  <div class="icon-wrapper me-3">
-                    <i class="bi bi-calendar-check"></i>
+                <div class="col-lg-4">
+                  <div class="service-item">
+                    <div class="service-icon-wrapper">
+                      <i class="fa fa-coins"></i>
+                    </div>
+                    <div class="service-details">
+                      <h5>Alur Pendampingan Kegiatan Donasi</h5>                                    
+                      <a href="assets/img/gallery/pendampingankegiatan.jpeg" target="_blank" class="service-link">
+                        <span>Tampilkan</span>
+                        <i class="fa fa-arrow-right"></i>
+                      </a>
+                    </div>
                   </div>
-                  <div>
-                    <h5>Penjadwalan Fleksibel</h5>
-                    <p class="mb-0">Pilih dari slot waktu yang tersedia yang sesuai dengan jadwal sibuk Anda.</p>
-                  </div>
-                </div><!-- End Info Item -->
-
-                <div class="info-item d-flex align-items-center mb-3" data-aos="fade-up" data-aos-delay="250">
-                  <div class="icon-wrapper me-3">
-                    <i class="bi bi-stopwatch"></i>
-                  </div>
-                  <div>
-                    <h5>Respon cepat</h5>
-                    <p class="mb-0">Mendapatkan konfirmasi dalam waktu 15 menit setelah mengirimkan permintaan Anda.</p>
-                  </div>
-                </div><!-- End Info Item -->
-
-                <div class="info-item d-flex align-items-center mb-3" data-aos="fade-up" data-aos-delay="300">
-                  <div class="icon-wrapper me-3">
-                    <i class="bi bi-shield-check"></i>
-                  </div>
-                  <div>
-                    <h5>Perawatan Medis Ahli</h5>
-                    <p class="mb-0">Dokter dan Spesialis bersertifikat siap melayani Anda</p>
-                  </div>
-                </div><!-- End Info Item -->
-              </div>
-
-              <div class="emergency-contact mt-4" data-aos="fade-up" data-aos-delay="350">
-                <div class="emergency-card p-3">
-                  <h6 class="mb-2"><i class="bi bi-telephone-fill me-2"></i>Layanan Gawat Darurat</h6>
-                  <p class="mb-0">Pusat Panggilan:<strong>1500 135</strong> untuk bantuan medis yang mendesak.</p>
                 </div>
-              </div>
 
-            </div>
-          </div><!-- End Appointment Info -->
-
-          <!-- Appointment Form -->
-          <div class="col-lg-6">
-            <div class="appointment-form-wrapper" data-aos="fade-up" data-aos-delay="200">
-              <form action="forms/appointment.php" method="post" class="appointment-form php-email-form">
-                <div class="row gy-3">
-
-                  <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Nama Lengkap" required="">
-                     <small class="form-text text-muted"><b>* Nama hanya boleh berisi huruf dan spasi</b></small>
+                <div class="col-lg-4">
+                  <div class="service-item">
+                    <div class="service-icon-wrapper">
+                      <i class="fa fa-coins"></i>
+                    </div>
+                    <div class="service-details">
+                      <h5>Alur Pendampingan Penggalangan Kegiatan Donasi melalui Media Online</h5>                                    
+                      <a href="assets/img/gallery/pendampinganpenggalangan.jpeg" target="_blank" class="service-link">
+                        <span>Tampilkan</span>
+                        <i class="fa fa-arrow-right"></i>
+                      </a>
+                    </div>
                   </div>
-
-                  <div class="col-md-6">
-                    <input type="number" pattern="[0-9]{10,15}" name="phone" class="form-control" placeholder="Nomor Telepon" required="">
-                    <small class="form-text text-muted"><b>* Hanya angka tanpa spasi atau simbol</b></small>
-                  </div>
-
-                  <div class="col-md-6">
-                    <select name="department" class="form-select" required="">
-                      <option value="">Pilih Spesialisasi</option>
-                      <option value="cardiology">Cardiology</option>
-                      <option value="neurology">Neurology</option>
-                      <option value="orthopedics">Orthopedics</option>
-                      <option value="pediatrics">Pediatrics</option>
-                      <option value="dermatology">Dermatology</option>
-                      <option value="general">General Medicine</option>
-                    </select>
-                  </div>
-
-                  <div class="col-md-6">
-                    <input type="date" name="date" class="form-control" required="">
-                  </div>
-
-                  <div class="col-md-6">
-                    <select name="doctor" class="form-select" required="">
-                      <option value="">Pilih Dokter</option>
-                      <option value="dr-johnson">Dr. Sarah Johnson</option>
-                      <option value="dr-martinez">Dr. Michael Martinez</option>
-                      <option value="dr-chen">Dr. Lisa Chen</option>
-                      <option value="dr-patel">Dr. Raj Patel</option>
-                      <option value="dr-williams">Dr. Emily Williams</option>
-                      <option value="dr-thompson">Dr. David Thompson</option>
-                    </select>
-                  </div>
-
-                  <div class="col-md-6">
-                    <select name="doctor" class="form-select" required="">
-                      <option value="">Pilih Jenis Pembayaran</option>
-                      <option value="dr-johnson">Dana</option>
-                      <option value="dr-martinez">Ovo</option>
-                      <option value="dr-chen">Gopay</option>
-                      <option value="dr-patel">Kartu Kredit</option>
-                    </select>
-                  </div>
-
-                  <div class="col-12">
-                    <textarea class="form-control" name="message" rows="5" placeholder="Jelaskan keluhan atau alasan berkunjung Anda."></textarea>
-                  </div>
-
-                  <div class="col-12">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your appointment request has been sent successfully. We will contact you shortly!</div>
-
-                    <button type="submit" class="btn btn-appointment w-100">
-                      <a href="404.html" class="btn btn-appointment w-100 d-flex justify-content-center align-items-center">
-                        <i class="bi bi-calendar-plus me-2"></i> Buat Perjanjian
-                      </a>                                     
-                    </button>
-                  </div>
-
                 </div>
-              </form>
-            </div>
-          </div><!-- End Appointment Form -->
 
-        </div>
-
-        <!-- Process Steps -->
-        <div class="process-steps mt-5" data-aos="fade-up" data-aos-delay="300">
-          <div class="row text-center gy-4">
-            <div class="col-lg-3 col-md-6">
-              <div class="step-item">
-                <div class="step-number">1</div>
-                <div class="step-icon">
-                  <i class="bi bi-person-fill"></i>
-                </div>
-                <h5>Lengkapi Detail</h5>
-                <p>Isi nama lengkap dan nomor telepon Anda.</p>
-              </div>
-            </div><!-- End Step -->
-
-            <div class="col-lg-3 col-md-6">
-              <div class="step-item">
-                <div class="step-number">2</div>
-                <div class="step-icon">
-                  <i class="bi bi-calendar-event"></i>
-                </div>
-                <h5>Pilih Spesialisasi, Jam Kunjungan, dan Dokter</h5>
-                <p>Pilih sesuai dengan pilihan yang tersedia.</p>
-              </div>
-            </div><!-- End Step -->
-
-            <div class="col-lg-3 col-md-6">
-              <div class="step-item">
-                <div class="step-number">3</div>
-                <div class="step-icon">
-                  <i class="bi bi-check-circle"></i>
-                </div>
-                <h5>Pilih Jenis Pembayaran</h5>
-                <p>Pilih sesuai dengan pilihan yang tersedia.</p>
-              </div>
-            </div><!-- End Step -->
-
-            <div class="col-lg-3 col-md-6">
-              <div class="step-item">
-                <div class="step-number">4</div>
-                <div class="step-icon">
-                  <i class="bi bi-heart-pulse"></i>
-                </div>
-                <h5>Isi Alasan Berkunjung dan Klik Buat Perjanjian</h5>
-                <p>Setelah daftar muncul pendaftaran perjanjian online berhasil.</p>
-              </div>
-            </div><!-- End Step -->
-
+                <div class="col-lg-4">
+                  <div class="service-item">
+                    <div class="service-icon-wrapper">
+                      <i class="fa fa-coins"></i>
+                    </div>
+                    <div class="service-details">
+                      <h5>Alur Pengelolaan Obat Donasi</h5>                                    
+                      <a href="assets/img/gallery/pengelolaandonasi.jpg" target="_blank" class="service-link">
+                        <span>Tampilkan</span>
+                        <i class="fa fa-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>                
           </div>
-        </div><!-- End Process Steps -->
+        </div>
 
       </div>
 
-    </section><!-- /Appointmnet Section -->
+    </section><!-- /Services Section -->
 
   </main>
 
