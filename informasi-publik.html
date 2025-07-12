@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -183,7 +182,7 @@
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="beranda.html" class="active">Beranda</a></li>
+            <li><a href="beranda.html">Beranda</a></li>
             <li class="dropdown">
               <a href="#"
                 ><span>Tentang Kami</span>
@@ -213,13 +212,15 @@
                 <i class="bi bi-chevron-down toggle-dropdown"></i
               ></a>
               <ul>
-                <li><a href="#.html">Layanan Unggulan</a></li>
+                <li><a href="layanan-unggulan.html">Layanan Unggulan</a></li>
                 <li>
-                  <a href="#.html">Rawat Jalan</a>
+                  <a href="rawat-jalan.html">Rawat Jalan</a>
                 </li>
-                <li><a href="#.html">Rawat Inap</a></li>
-                <li><a href="#.html">Pelayanan Penunjang</a></li>
-                <li><a href="#.html">Fasilitas</a></li>
+                <li><a href="rawat-inap.html">Rawat Inap</a></li>
+                <li>
+                  <a href="pelayanan-penunjang.html">Pelayanan Penunjang</a>
+                </li>
+                <li><a href="fasilitas.html">Fasilitas</a></li>
               </ul>
             </li>
             <li class="dropdown">
@@ -243,9 +244,13 @@
                 <i class="bi bi-chevron-down toggle-dropdown"></i
               ></a>
               <ul>
-                <li><a href="survei-kepuasan.html">Survei Kepuasan Masyarakat</a></li>
                 <li>
-                  <a href="pendaftaran-online.html">Pendaftaran Online Pasien</a>
+                  <a href="survei-kepuasan.html">Survei Kepuasan Masyarakat</a>
+                </li>
+                <li>
+                  <a href="pendaftaran-online.html"
+                    >Pendaftaran Online Pasien</a
+                  >
                 </li>
                 <li>
                   <a href="tata-tertib.html">Tata Tertib & Jam Berkunjung </a>
@@ -264,7 +269,7 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#"
+              <a href="#" class="active"
                 ><span>Informasi Lain</span>
                 <i class="bi bi-chevron-down toggle-dropdown"></i
               ></a>
@@ -281,10 +286,9 @@
       </div>
     </header>
 
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title">
+    <main class="main">
+      <!-- Page Title -->
+      <div class="page-title">
         <div class="breadcrumbs">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
@@ -296,670 +300,777 @@
             </ol>
           </nav>
         </div>
-      <div class="title-wrapper">
-        <h1>Informasi Publik: Laporan Rumah Sakit</h1>
+        <div class="title-wrapper">
+          <h1>Informasi Publik: Laporan Rumah Sakit</h1>
+        </div>
       </div>
-    </div><!-- End Page Title -->
+      <!-- End Page Title -->
 
-    <!-- Services Section -->
-    <section id="services" class="services section">
+      <!-- Services Section -->
+      <section id="services" class="services section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="services-tabs">
+            <ul
+              class="nav nav-tabs"
+              role="tablist"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="services-info-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#services-info"
+                  type="button"
+                  role="tab"
+                >
+                  INFO
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="services-2019-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#services-2019"
+                  type="button"
+                  role="tab"
+                >
+                  2019
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="services-2020-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#services-2020"
+                  type="button"
+                  role="tab"
+                >
+                  2020
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="services-2021-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#services-2021"
+                  type="button"
+                  role="tab"
+                >
+                  2021
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="services-2022-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#services-2022"
+                  type="button"
+                  role="tab"
+                >
+                  2022
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="services-2023-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#services-2023"
+                  type="button"
+                  role="tab"
+                >
+                  2023
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="services-2024-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#services-2024"
+                  type="button"
+                  role="tab"
+                >
+                  2024
+                </button>
+              </li>
+            </ul>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="services-tabs">
-          <ul class="nav nav-tabs" role="tablist" data-aos="fade-up" data-aos-delay="200">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="services-info-tab" data-bs-toggle="tab" data-bs-target="#services-info" type="button" role="tab">INFO</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="services-2019-tab" data-bs-toggle="tab" data-bs-target="#services-2019" type="button" role="tab">2019</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="services-2020-tab" data-bs-toggle="tab" data-bs-target="#services-2020" type="button" role="tab">2020</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="services-2021-tab" data-bs-toggle="tab" data-bs-target="#services-2021" type="button" role="tab">2021</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="services-2022-tab" data-bs-toggle="tab" data-bs-target="#services-2022" type="button" role="tab">2022</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="services-2023-tab" data-bs-toggle="tab" data-bs-target="#services-2023" type="button" role="tab">2023</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="services-2024-tab" data-bs-toggle="tab" data-bs-target="#services-2024" type="button" role="tab">2024</button>
-            </li>
-          </ul>
-
-          <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
-
-            <div class="tab-pane fade show active" id="services-info" role="tabpanel">
-              <div class="row g-4">
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-alt"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Dashboard</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
+            <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
+              <div
+                class="tab-pane fade show active"
+                id="services-info"
+                role="tabpanel"
+              >
+                <div class="row g-4">
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-alt"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>Dashboard</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-alt"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Rencana Strategis Bisnis RSCM-FKUI 2020-2024</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-alt"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>Rencana Strategis Bisnis RSCM-FKUI 2020-2024</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-hand-holding-heart"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Laporan Donasi COVID-19 RSCM</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-hand-holding-heart"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>Laporan Donasi COVID-19 RSCM</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-alt"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Laporan realisasi Anggaran Satuan Kerja untuk Tahun yang Berakhir 31 Desember 2020 dan 2019</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-alt"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>
+                          Laporan realisasi Anggaran Satuan Kerja untuk Tahun
+                          yang Berakhir 31 Desember 2020 dan 2019
+                        </h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-contract"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>SK Standar Pelayanan RSUPN Dr. Cipto Mangunkusumo</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-contract"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>
+                          SK Standar Pelayanan RSUPN Dr. Cipto Mangunkusumo
+                        </h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-clipboard-list"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Monitoring Kontrak</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-clipboard-list"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>Monitoring Kontrak</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-clipboard-list"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Rencana Strategis Bisnis 2020-2024</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>                
-              </div>
-            </div>
-
-            <div class="tab-pane fade" id="services-2019" role="tabpanel">
-              <div class="row g-4">
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-alt"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Laporan Akuntabilitas Kinerja Instansi Pemerintah (LAKIP) RSUPN Dr. Cipto Mangunkusumo Tahun 2019</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-alt"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Realisasi Anggaran Belanja Tahun Anggaran 2019</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-alt"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Analisis Hasil Survey Kepuasan Masyarakat Periode Juni 2019</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-alt"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>DIPA RSCM Tahun Anggaran 2019</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-clipboard-list"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Rencana Kerja Tahunan 2019</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-signature"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Perjanjian Kinerja Tahun 2019</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-alt"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Analisis Hasil Survey Kepuasan Masyarakat Periode November 2019</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-clipboard-list"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>Rencana Strategis Bisnis 2020-2024</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="tab-pane fade" id="services-2020" role="tabpanel">
-              <div class="row g-4">
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-alt"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Capaian Indikator Prioritas Rumah Sakit Tahun 2020</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
+              <div class="tab-pane fade" id="services-2019" role="tabpanel">
+                <div class="row g-4">
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-alt"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>
+                          Laporan Akuntabilitas Kinerja Instansi Pemerintah
+                          (LAKIP) RSUPN Dr. Cipto Mangunkusumo Tahun 2019
+                        </h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-alt"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Laporan Akuntabilitas Kinerja Instansi Pemerintah (LAKIP) RSUPN Dr. Cipto Mangunkusumo Tahun 2020</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-alt"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>Realisasi Anggaran Belanja Tahun Anggaran 2019</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-clipboard-list"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Rencana Kinerja Tahunan 2020</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-alt"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>
+                          Analisis Hasil Survey Kepuasan Masyarakat Periode Juni
+                          2019
+                        </h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-signature"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Perjanjian Kinerja Tahun 2020</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-alt"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>DIPA RSCM Tahun Anggaran 2019</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-alt"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Analisis Hasil Survey Kepuasan Masyarakat Periode November 2020</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-clipboard-list"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>Rencana Kerja Tahunan 2019</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>                
-              </div>
-            </div>
 
-            <div class="tab-pane fade" id="services-2021" role="tabpanel">
-              <div class="row g-4">
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-alt"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Laporan Akuntabilitas Kinerja Instansi Pemerintah (LAKIP) RSUPN Dr. Cipto Mangunkusumo Tahun 2021</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-signature"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>Perjanjian Kinerja Tahun 2019</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-alt"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Laporan Realisasi Anggaran Belanja Tahun 2021</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
 
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-clipboard-list"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Rencana Kinerja Tahunan 2021</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-alt"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Analisis Hasil Survey Kepuasan Masyarakat Periode November 2021</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-signature"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Perjanjian Kinerja Tahun 2021</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>                
-              </div>
-            </div>
-
-            <div class="tab-pane fade" id="services-2022" role="tabpanel">
-              <div class="row g-4">
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-alt"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Laporan Akuntabilitas Kinerja Instansi Pemerintah (LAKIP) RSUPN Dr. Cipto Mangunkusumo Tahun 2022</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-alt"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Laporan Realisasi Anggaran Belanja Tahun 2022</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-clipboard-list"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Rencana Kinerja Tahunan 2022</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-signature"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Perjanjian Kinerja Tahun 2022</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-alt"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>
+                          Analisis Hasil Survey Kepuasan Masyarakat Periode
+                          November 2019
+                        </h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="tab-pane fade" id="services-2023" role="tabpanel">
-              <div class="row g-4"> 
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-clipboard-list"></i>
+              <div class="tab-pane fade" id="services-2020" role="tabpanel">
+                <div class="row g-4">
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-alt"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>
+                          Capaian Indikator Prioritas Rumah Sakit Tahun 2020
+                        </h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
-                    <div class="service-details">
-                      <h5>Rencana Strategis Bisnis 2023</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-alt"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>
+                          Laporan Akuntabilitas Kinerja Instansi Pemerintah
+                          (LAKIP) RSUPN Dr. Cipto Mangunkusumo Tahun 2020
+                        </h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-clipboard-list"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>Rencana Kinerja Tahunan 2020</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-signature"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>Perjanjian Kinerja Tahun 2020</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-alt"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>
+                          Analisis Hasil Survey Kepuasan Masyarakat Periode
+                          November 2020
+                        </h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-alt"></i>
+              <div class="tab-pane fade" id="services-2021" role="tabpanel">
+                <div class="row g-4">
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-alt"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>
+                          Laporan Akuntabilitas Kinerja Instansi Pemerintah
+                          (LAKIP) RSUPN Dr. Cipto Mangunkusumo Tahun 2021
+                        </h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
-                    <div class="service-details">
-                      <h5>Laporan Akuntabilitas Kinerja Instansi Pemerintah (LAKIP) RSUPN Dr. Cipto Mangunkusumo Tahun 2023</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-alt"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>Laporan Realisasi Anggaran Belanja Tahun 2021</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-clipboard-list"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>Rencana Kinerja Tahunan 2021</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-alt"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>
+                          Analisis Hasil Survey Kepuasan Masyarakat Periode
+                          November 2021
+                        </h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-signature"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>Perjanjian Kinerja Tahun 2021</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-alt"></i>
+              <div class="tab-pane fade" id="services-2022" role="tabpanel">
+                <div class="row g-4">
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-alt"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>
+                          Laporan Akuntabilitas Kinerja Instansi Pemerintah
+                          (LAKIP) RSUPN Dr. Cipto Mangunkusumo Tahun 2022
+                        </h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
-                    <div class="service-details">
-                      <h5>Laporan Realisasi Anggaran Belanja Tahun 2023</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-alt"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>Laporan Realisasi Anggaran Belanja Tahun 2022</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-clipboard-list"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>Rencana Kinerja Tahunan 2022</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-signature"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>Perjanjian Kinerja Tahun 2022</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-alt"></i>
+              <div class="tab-pane fade" id="services-2023" role="tabpanel">
+                <div class="row g-4">
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-clipboard-list"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>Rencana Strategis Bisnis 2023</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
-                    <div class="service-details">
-                      <h5>Analisis Hasil Survey Kepuasan Masyarakat Semester 1 Tahun 2023</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-alt"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>
+                          Laporan Akuntabilitas Kinerja Instansi Pemerintah
+                          (LAKIP) RSUPN Dr. Cipto Mangunkusumo Tahun 2023
+                        </h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-alt"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>Laporan Realisasi Anggaran Belanja Tahun 2023</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-alt"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>
+                          Analisis Hasil Survey Kepuasan Masyarakat Semester 1
+                          Tahun 2023
+                        </h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-clipboard-list"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>Rencana Kinerja Tahunan 2023</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-signature"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>Perjanjian Kinerja Tahun 2023</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-clipboard-list"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Rencana Kinerja Tahunan 2023</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
+              <div class="tab-pane fade" id="services-2024" role="tabpanel">
+                <div class="row g-4">
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-signature"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>Perjanjian Kinerja Tahun 2024</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-signature"></i>
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-alt"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>
+                          Laporan Akuntabilitas Kinerja Instansi Pemerintah
+                          (LAKIP) RSUPN Dr. Cipto Mangunkusumo Tahun 2024
+                        </h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
-                    <div class="service-details">
-                      <h5>Perjanjian Kinerja Tahun 2023</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-file-alt"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>Laporan Realisasi Anggaran Belanja Tahun 2024</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-clipboard-list"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>Rencana Strategis Bisnis 2020-2024</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="service-item">
+                      <div class="service-icon-wrapper">
+                        <i class="fa fa-clipboard-list"></i>
+                      </div>
+                      <div class="service-details">
+                        <h5>DIPA RSCM Tahun Anggaran 2024</h5>
+                        <a href="404.html" class="service-link">
+                          <span>Tampilkan</span>
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
-            <div class="tab-pane fade" id="services-2024" role="tabpanel">
-              <div class="row g-4">   
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-signature"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Perjanjian Kinerja Tahun 2024</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-alt"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Laporan Akuntabilitas Kinerja Instansi Pemerintah (LAKIP) RSUPN Dr. Cipto Mangunkusumo Tahun 2024</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-file-alt"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Laporan Realisasi Anggaran Belanja Tahun 2024</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-clipboard-list"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>Rencana Strategis Bisnis 2020-2024</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4">
-                  <div class="service-item">
-                    <div class="service-icon-wrapper">
-                      <i class="fa fa-clipboard-list"></i>
-                    </div>
-                    <div class="service-details">
-                      <h5>DIPA RSCM Tahun Anggaran 2024</h5>                                    
-                      <a href="404.html" class="service-link">
-                        <span>Tampilkan</span>
-                        <i class="fa fa-arrow-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>                             
-              </div>
-            </div>
-
           </div>
         </div>
+      </section>
+      <!-- /Services Section -->
+    </main>
 
-      </div>
-
-    </section><!-- /Services Section -->
-
-  </main>
-
-  <footer id="footer" class="footer position-relative light-background">
+    <footer id="footer" class="footer position-relative light-background">
       <div class="container footer-top">
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6 footer-about">
-            <a href="index.html" class="logo d-flex align-items-center">
+            <a href="beranda.html" class="logo d-flex align-items-center">
               <img
                 src="assets/img/logo/rscm.png"
                 alt="rscm Logo"
@@ -1134,7 +1245,7 @@
           Designed by <a href="https://www.stis.ac.id/">Kelompok 8 3SI2</a>
         </div>
       </div>
-  </footer>
+    </footer>
 
     <!-- Scroll Top -->
     <a
@@ -1160,5 +1271,4 @@
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
   </body>
-
 </html>
