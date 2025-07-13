@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Beranda - RSCM</title>
+    <title>Karir - RSCM</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 
@@ -41,60 +41,150 @@
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- Custom CSS for Career Page -->
     <style>
-    .construction-icon {
-      font-size: 4rem;
-      color: var(--accent-color);
-      margin-bottom: 1rem;
-    }
-    
-    .status-badge {
-      background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), transparent 25%));
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-weight: 500;
-      margin-bottom: 1rem;
-      display: inline-block;
-    }
-    
-    .progress-info {
-      background: #f8f9fa;
-      border-left: 4px solid var(--accent-color);
-      padding: 1rem;
-      margin: 1.5rem 0;
-      border-radius: 5px;
-    }
-    
-    .expected-timeline {
-      background: #e3f2fd;
-      border: 1px solid #90caf9;
-      padding: 1rem;
-      border-radius: 8px;
-      margin: 1rem 0;
-    }
-
-    .btn-outline-primary {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
-  background-color: transparent;
-}
-
-.btn-outline-primary:hover,
-.btn-outline-primary:focus {
-  color: #fff;
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-}
-  </style>
-
-    <!-- =======================================================
-  * Template Name: MediTrust
-  * Template URL: https://bootstrapmade.com/meditrust-bootstrap-hospital-website-template/
-  * Updated: Jul 04 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+      .career-section {
+        padding: 60px 0;
+        background: #f8f9fa;
+      }
+      
+      .career-intro {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      
+      .career-intro h2 {
+        color: var(--default-color);
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      
+      .career-intro p {
+        color: #6c757d;
+        font-size: 1.1rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      
+      .job-listing {
+        background: white;
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+      }
+      
+      .job-listing:hover {
+        transform: translateY(-5px);
+      }
+      
+      .job-title {
+        color: var(--default-color);
+        font-weight: 600;
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+      }
+      
+      .job-meta {
+        color: #6c757d;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+      }
+      
+      .job-meta i {
+        margin-right: 5px;
+      }
+      
+      .job-description {
+        color: #495057;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      
+      .btn-apply {
+        background: var(--accent-color);
+        color: white;
+        padding: 10px 25px;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+      }
+      
+      .btn-apply:hover {
+        background: color-mix(in srgb, var(--accent-color), transparent 25%);
+        color: white;
+        text-decoration: none;
+      }
+      
+      .search-box {
+        background: white;
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 40px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+      
+      .search-box input {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 12px 15px;
+        width: 100%;
+        font-size: 1rem;
+      }
+      
+      .search-box input:focus {
+        outline: none;
+        border-color: color-mix(in srgb, var(--accent-color), transparent 25%);
+        box-shadow: 0 0 0 2px rgba(44, 90, 160, 0.2);
+      }
+      
+      .no-jobs {
+        text-align: center;
+        padding: 60px 0;
+        color: #6c757d;
+      }
+      
+      .no-jobs i {
+        font-size: 4rem;
+        margin-bottom: 20px;
+        color: #dee2e6;
+      }
+      
+      .benefits-section {
+        background: white;
+        padding: 60px 0;
+      }
+      
+      .benefit-card {
+        text-align: center;
+        padding: 30px 20px;
+        border-radius: 10px;
+        background: #f8f9fa;
+        margin-bottom: 30px;
+        height: 100%;
+      }
+      
+      .benefit-card i {
+        font-size: 3rem;
+        color: color-mix(in srgb, var(--accent-color), transparent 25%);
+        margin-bottom: 20px;
+      }
+      
+      .benefit-card h4 {
+        color: color-mix(in srgb, var(--accent-color), transparent 25%);
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+      
+      .benefit-card p {
+        color: #6c757d;
+        line-height: 1.6;
+      }
+    </style>
   </head>
 
   <body class="index-page">
@@ -106,8 +196,6 @@
           href="beranda.html"
           class="logo d-flex align-items-center me-auto me-xl-0"
         >
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.webp" alt=""> -->
           <svg
             class="my-icon"
             viewBox="0 0 24 24"
@@ -222,13 +310,12 @@
               ></path>
             </g>
           </svg>
-
           <h1 class="sitename">RSCM</h1>
         </a>
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="beranda.html" class="active">Beranda</a></li>
+            <li><a href="beranda.html">Beranda</a></li>
             <li class="dropdown">
               <a href="#"
                 ><span>Tentang Kami</span>
@@ -275,12 +362,12 @@
                 <i class="bi bi-chevron-down toggle-dropdown"></i
               ></a>
               <ul>
-                <li><a href="jadwalRSCM.html">Jadwal Dokter RSCM</a></li>
+                <li><a href="#.html">Jadwal Dokter RSCM</a></li>
                 <li>
-                  <a href="jadwalKencana.html">Jadwal Dokter RSCM Kencana</a>
+                  <a href="#.html">Jadwal Dokter RSCM Kencana</a>
                 </li>
                 <li>
-                  <a href="jadwalTele.html">Jadwal Telekonsultasi Dokter RSCM Kencana</a>
+                  <a href="#.html">Jadwal Terkonsultasi Dokter RSCM Kencana</a>
                 </li>
               </ul>
             </li>
@@ -320,7 +407,7 @@
                 <i class="bi bi-chevron-down toggle-dropdown"></i
               ></a>
               <ul>
-                <li><a href="karir.html">Karir</a></li>
+                <li><a href="#" class="active">Karir</a></li>
                 <li><a href="informasi-publik.html">Informasi Publik</a></li>
                 <li><a href="#">Rujukan Nasional</a></li>
               </ul>
@@ -332,89 +419,208 @@
       </div>
     </header>
 
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title">
-      <div class="breadcrumbs">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house"></i> Beranda</a></li>
-            <li class="breadcrumb-item"><a href="#">Halaman</a></li>
-            <li class="breadcrumb-item active current">Sedang Dikembangkan</li>
-          </ol>
-        </nav>
+    <main class="main">
+      <!-- Page Title -->
+      <div class="page-title">
+        <div class="breadcrumbs">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="beranda.html"><i class="bi bi-house"></i> Beranda</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="#">Informasi Lain</a>
+              </li>
+              <li class="breadcrumb-item active current">
+                Karir
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <div class="title-wrapper">
+          <h1>Karir</h1>
+          <br />
+        </div>
       </div>
+      <!-- End Page Title -->
 
-      <div class="title-wrapper">
-        <h1>Halaman Sedang Dikembangkan</h1>
-        <p>Halaman ini sedang dalam proses pengembangan untuk memberikan pengalaman terbaik bagi Anda.</p>
-      </div>
-    </div><!-- End Page Title -->
-
-    <!-- Under Construction Section -->
-    <section id="under-construction" class="error-404 section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="text-center">
-          <div class="status-badge" data-aos="fade-up" data-aos-delay="200">
-            🚧 DALAM PENGEMBANGAN
-          </div>
-
-          <div class="error-icon mb-4" data-aos="zoom-in" data-aos-delay="300">
-            <i class="bi bi-tools construction-icon"></i>
-          </div>
-
-          <h2 class="error-title mb-3" data-aos="fade-up" data-aos-delay="400">
-            Kami Sedang Menyiapkan Sesuatu yang Istimewa
-          </h2>
-
-          <p class="error-text mb-4" data-aos="fade-up" data-aos-delay="500">
-            Halaman ini sedang dalam tahap pengembangan. Tim kami bekerja keras untuk menyediakan konten dan fitur terbaik untuk Anda. Mohon bersabar menunggu ya!
-          </p>
-
-          <div class="progress-info" data-aos="fade-up" data-aos-delay="600">
-            <h5><i class="bi bi-info-circle text-primary"></i> Apa yang Sedang Kami Kerjakan?</h5>
-            <ul class="text-start mt-3">
-              <li>✅ Mendesain tampilan yang user-friendly</li>
-              <li>⏳ Mengembangkan fitur-fitur baru</li>
-              <li>⏳ Melakukan pengujian kualitas</li>
-              <li>⏳ Menyiapkan konten dan dokumen yang informatif</li>
-            </ul>
-          </div>
-
-          <div class="expected-timeline" data-aos="fade-up" data-aos-delay="700">
-            <h6><i class="bi bi-calendar-event text-info"></i> Perkiraan Waktu Penyelesaian</h6>
-            <p class="mb-0">Halaman ini diperkirakan akan selesai dalam <strong>jangka waktu yang belum ditentukan</strong>. Kami akan segera mengumumkan ketika sudah siap!</p>
-          </div>
-
-          
-
-          <div class="error-action" data-aos="fade-up" data-aos-delay="900">
-            <a href="beranda.html" class="btn btn-primary me-2">
-              <i class="bi bi-house"></i> Kembali ke Beranda
-            </a>
-            <a href="bantuan.html" class="btn btn-outline-primary">
-              <i class="bi bi-envelope"></i> Hubungi Kami
-            </a>
-          </div>
-
-          <div class="mt-4" data-aos="fade-up" data-aos-delay="1000">
-            <p class="text-muted">
-              <small><i class="bi bi-bell"></i> Ingin diberitahu ketika halaman ini selesai? <a href="bantuan.html">Hubungi kami</a> untuk mendapatkan notifikasi.</small>
+      <!-- Career Section -->
+      <section class="career-section">
+        <div class="container" data-aos="fade-up">
+          <div class="career-intro">
+            <h2>Bergabunglah dengan Tim RSCM</h2>
+            <p>
+              Rumah Sakit Cipto Mangunkusumo (RSCM) adalah rumah sakit rujukan nasional yang selalu mencari talenta terbaik untuk memberikan pelayanan kesehatan berkualitas tinggi. Kami menawarkan lingkungan kerja yang profesional, peluang pengembangan karir, dan kesempatan untuk berkontribusi dalam pelayanan kesehatan masyarakat Indonesia.
             </p>
           </div>
 
+          <!-- Search Box -->
+          <div class="search-box" data-aos="fade-up">
+            <div class="row">
+              <div class="col-lg-10">
+                <input 
+                  type="text" 
+                  id="searchInput" 
+                  placeholder="Cari lowongan kerja berdasarkan posisi, departemen, atau kata kunci..."
+                  onkeyup="searchJobs()"
+                />
+              </div>
+              <div class="col-lg-2">
+                <button class="btn btn-apply w-100" onclick="searchJobs()">
+                  <i class="bi bi-search"></i> Cari
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Job Listings -->
+          <div id="jobListings">
+            <div class="job-listing" data-aos="fade-up">
+              <h3 class="job-title">Pengumuman Perpanjangan Seleksi Terbuka Jabatan Manajerial Level Kepala Unit Kerja Tahun 2023</h3>
+              <div class="job-meta">
+                <span><i class="bi bi-calendar"></i> 27 Desember 2023</span>
+                <span class="ms-3"><i class="bi bi-building"></i> Manajemen</span>
+                <span class="ms-3"><i class="bi bi-geo-alt"></i> Jakarta</span>
+              </div>
+              <div class="job-description">
+                Perpanjangan seleksi terbuka untuk posisi manajerial level kepala unit kerja di berbagai departemen RSCM. Peluang karir untuk bergabung dengan tim manajemen profesional dalam mengelola pelayanan kesehatan terdepan di Indonesia.
+              </div>
+              <a href="404.html" class="btn-apply">Lihat Detail</a>
+            </div>
+
+            <div class="job-listing" data-aos="fade-up">
+              <h3 class="job-title">Pengumuman Pelaksanaan Tes MMPI Bagi Peserta Lolos Seleksi Administrasi Seleksi Terbuka Jabatan Pimpinan Manajerial Level Kepala Th 2023</h3>
+              <div class="job-meta">
+                <span><i class="bi bi-calendar"></i> 16 Desember 2023</span>
+                <span class="ms-3"><i class="bi bi-building"></i> Administrasi</span>
+                <span class="ms-3"><i class="bi bi-geo-alt"></i> Jakarta</span>
+              </div>
+              <div class="job-description">
+                Informasi pelaksanaan tes MMPI untuk peserta yang lolos seleksi administrasi pada seleksi terbuka jabatan pimpinan manajerial level kepala tahun 2023. Tahap lanjutan dalam proses seleksi kepemimpinan RSCM.
+              </div>
+              <a href="404.html" class="btn-apply">Lihat Detail</a>
+            </div>
+
+            <div class="job-listing" data-aos="fade-up">
+              <h3 class="job-title">Hasil Seleksi Administrasi Seleksi Terbuka Jabatan Pimpinan Manajerial Level Kepala Th 2023</h3>
+              <div class="job-meta">
+                <span><i class="bi bi-calendar"></i> 15 Desember 2023</span>
+                <span class="ms-3"><i class="bi bi-building"></i> Administrasi</span>
+                <span class="ms-3"><i class="bi bi-geo-alt"></i> Jakarta</span>
+              </div>
+              <div class="job-description">
+                Pengumuman hasil seleksi administrasi untuk seleksi terbuka jabatan pimpinan manajerial level kepala tahun 2023. Daftar peserta yang lolos ke tahap selanjutnya dalam proses rekrutmen kepemimpinan RSCM.
+              </div>
+              <a href="404.html" class="btn-apply">Lihat Detail</a>
+            </div>
+
+            <div class="job-listing" data-aos="fade-up">
+              <h3 class="job-title">Penundaan Pengumuman Hasil Seleksi Administrasi Rekrutmen Pegawai Kontrak RSCM Tahun 2023</h3>
+              <div class="job-meta">
+                <span><i class="bi bi-calendar"></i> 7 Maret 2023</span>
+                <span class="ms-3"><i class="bi bi-building"></i> Pegawai Kontrak</span>
+                <span class="ms-3"><i class="bi bi-geo-alt"></i> Jakarta</span>
+              </div>
+              <div class="job-description">
+                Pengumuman penundaan hasil seleksi administrasi untuk rekrutmen pegawai kontrak RSCM tahun 2023. Informasi terbaru mengenai jadwal dan proses seleksi pegawai kontrak di berbagai unit kerja.
+              </div>
+              <a href="404.html" class="btn-apply">Lihat Detail</a>
+            </div>
+
+            <div class="job-listing" data-aos="fade-up">
+              <h3 class="job-title">Surat Lamaran dan Pernyataan Rekrutmen Pegawai Kontrak RSCM 2023</h3>
+              <div class="job-meta">
+                <span><i class="bi bi-calendar"></i> 27 Februari 2023</span>
+                <span class="ms-3"><i class="bi bi-building"></i> Pegawai Kontrak</span>
+                <span class="ms-3"><i class="bi bi-geo-alt"></i> Jakarta</span>
+              </div>
+              <div class="job-description">
+                Format surat lamaran dan pernyataan untuk rekrutmen pegawai kontrak RSCM tahun 2023. Panduan lengkap untuk calon pelamar dalam menyiapkan dokumen aplikasi yang diperlukan.
+              </div>
+              <a href="404.html" class="btn-apply">Lihat Detail</a>
+            </div>
+
+            <div class="job-listing" data-aos="fade-up">
+              <h3 class="job-title">Pengumuman Rekrutmen Pegawai Kontrak RSCM Tahun 2023</h3>
+              <div class="job-meta">
+                <span><i class="bi bi-calendar"></i> 27 Februari 2023</span>
+                <span class="ms-3"><i class="bi bi-building"></i> Pegawai Kontrak</span>
+                <span class="ms-3"><i class="bi bi-geo-alt"></i> Jakarta</span>
+              </div>
+              <div class="job-description">
+                Pengumuman resmi pembukaan rekrutmen pegawai kontrak RSCM tahun 2023. Berbagai posisi tersedia di berbagai departemen untuk mendukung pelayanan kesehatan berkualitas tinggi.
+              </div>
+              <a href="404.html" class="btn-apply">Lihat Detail</a>
+            </div>
+          </div>
+
+          <!-- No Results Message -->
+          <div id="noResults" class="no-jobs" style="display: none;">
+            <i class="bi bi-search"></i>
+            <h4>Tidak ada lowongan yang ditemukan</h4>
+            <p>Silakan coba dengan kata kunci yang berbeda atau periksa kembali nanti untuk lowongan terbaru.</p>
+          </div>
         </div>
+      </section>
 
-      </div>
+      <!-- Benefits Section -->
+      <section class="benefits-section">
+        <div class="container" data-aos="fade-up">
+          <div class="row">
+            <div class="col-lg-12 text-center mb-5">
+              <h2 style="color: var(--default-color); font-weight: 700;">Mengapa Bergabung dengan RSCM?</h2>
+              <p style="color: #6c757d; font-size: 1.1rem;">Nikmati berbagai keuntungan dan fasilitas yang kami tawarkan untuk pengembangan karir Anda</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up">
+              <div class="benefit-card">
+                <i class="bi bi-hospital"></i>
+                <h4>Lingkungan Kerja Profesional</h4>
+                <p>Bekerja di rumah sakit rujukan nasional dengan standar pelayanan kesehatan internasional dan teknologi medis terdepan.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up">
+              <div class="benefit-card">
+                <i class="bi bi-graph-up"></i>
+                <h4>Pengembangan Karir</h4>
+                <p>Kesempatan untuk berkembang melalui program pelatihan berkelanjutan, sertifikasi profesional, dan jenjang karir yang jelas.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up">
+              <div class="benefit-card">
+                <i class="bi bi-people"></i>
+                <h4>Tim Multidisiplin</h4>
+                <p>Berkolaborasi dengan para ahli medis dan tenaga profesional dari berbagai disiplin ilmu untuk memberikan pelayanan terbaik.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up">
+              <div class="benefit-card">
+                <i class="bi bi-shield-check"></i>
+                <h4>Fasilitas Lengkap</h4>
+                <p>Akses ke fasilitas kesehatan karyawan, asuransi kesehatan, dan berbagai tunjangan yang kompetitif.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up">
+              <div class="benefit-card">
+                <i class="bi bi-mortarboard"></i>
+                <h4>Pusat Pendidikan</h4>
+                <p>Berpartisipasi dalam kegiatan pendidikan dan penelitian sebagai bagian dari rumah sakit pendidikan terkemuka.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up">
+              <div class="benefit-card">
+                <i class="bi bi-heart"></i>
+                <h4>Misi Mulia</h4>
+                <p>Berkontribusi nyata dalam pelayanan kesehatan masyarakat dan penyelamatan nyawa sebagai bagian dari misi kemanusiaan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-    </section><!-- /Under Construction Section -->
-
-  </main>
-
-  <footer id="footer" class="footer position-relative light-background">
+   <footer id="footer" class="footer position-relative light-background">
       <div class="container footer-top">
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6 footer-about">
@@ -618,5 +824,50 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+        <script>
+        function searchJobs() {
+        const searchInput = document.getElementById('searchInput');
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        const jobListings = document.querySelectorAll('.job-listing');
+        const noResults = document.getElementById('noResults');
+        const jobListingsContainer = document.getElementById('jobListings');
+        
+        let hasResults = false;
+        
+        // Loop through all job listings
+        jobListings.forEach(function(job) {
+            const jobTitle = job.querySelector('.job-title').textContent.toLowerCase();
+            const jobMeta = job.querySelector('.job-meta').textContent.toLowerCase();
+            const jobDescription = job.querySelector('.job-description').textContent.toLowerCase();
+            
+            // Check if search term matches any part of the job listing
+            if (searchTerm === '' || 
+                jobTitle.includes(searchTerm) || 
+                jobMeta.includes(searchTerm) || 
+                jobDescription.includes(searchTerm)) {
+            job.style.display = 'block';
+            hasResults = true;
+            } else {
+            job.style.display = 'none';
+            }
+        });
+        
+        // Show/hide "no results" message
+        if (hasResults) {
+            noResults.style.display = 'none';
+            jobListingsContainer.style.display = 'block';
+        } else {
+            noResults.style.display = 'block';
+            jobListingsContainer.style.display = 'none';
+        }
+        }
+
+        // Optional: Clear search when input is empty
+        document.getElementById('searchInput').addEventListener('input', function() {
+        if (this.value.trim() === '') {
+            searchJobs(); // This will show all jobs again
+        }
+        });
+        </script>
   </body>
 </html>

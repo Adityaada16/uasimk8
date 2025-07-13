@@ -1,0 +1,1052 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Beranda - RSCM</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicons -->
+    <link href="assets/img/logo/rscm.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <style>
+    /* Custom CSS for Schedule Modal */
+    .schedule-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .schedule-modal-content {
+      background-color: #fefefe;
+      margin: 5% auto;
+      padding: 30px;
+      border: none;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .schedule-modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .schedule-modal-title {
+      margin: 0;
+      color: color-mix(in srgb, var(--accent-color), transparent 25%);;
+      font-size: 1.5em;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: #aaa;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .close-btn:hover {
+      color: #000;
+    }
+
+    .doctor-info {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .doctor-info h4 {
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .doctor-info p {
+      color: #666;
+      margin: 0;
+    }
+
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+
+    .schedule-table th {
+      background-color: #f8f9fa;
+      color: color-mix(in srgb, var(--accent-color), transparent 25%);;
+      font-weight: 600;
+    }
+
+    .schedule-table tr:hover {
+      background-color: #f8f9fa;
+    }
+
+    .schedule-available {
+      color: #28a745;
+      font-weight: 500;
+    }
+
+    .schedule-unavailable {
+      color: #dc3545;
+      font-style: italic;
+    }
+
+    .btn-appointment {
+      margin-right: 10px;
+      margin-bottom: 5px;
+    }
+
+    /* CSS untuk tombol "Buat Janji Temu" */
+    .btn-make-appointment {
+  display: inline-block;
+  background: #28a745; /* Warna hijau */
+  color: #ffffff; /* Warna teks putih */
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect untuk tombol "Buat Janji Temu" */
+.btn-make-appointment:hover {
+  background: color-mix(in srgb, #28a745 90%, black 15%); /* Efek perubahan warna hijau */
+  color: #ffffff; /* Warna teks tetap putih */
+  transform: translateY(-2px); /* Efek geser sedikit saat hover */
+}
+
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .schedule-modal-content {
+        margin: 10% auto;
+        padding: 20px;
+        width: 95%;
+      }
+      
+      .schedule-table {
+        font-size: 14px;
+      }
+      
+      .schedule-table th,
+      .schedule-table td {
+        padding: 8px;
+      }
+    }
+  </style>
+
+    <!-- =======================================================
+  * Template Name: MediTrust
+  * Template URL: https://bootstrapmade.com/meditrust-bootstrap-hospital-website-template/
+  * Updated: Jul 04 2025 with Bootstrap v5.3.7
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body class="index-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <a
+          href="beranda.html"
+          class="logo d-flex align-items-center me-auto me-xl-0"
+        >
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.webp" alt=""> -->
+          <svg
+            class="my-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="bgCarrier" stroke-width="0"></g>
+            <g
+              id="tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="iconCarrier">
+              <path
+                d="M22 22L2 22"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+              <path
+                d="M17 22V6C17 4.11438 17 3.17157 16.4142 2.58579C15.8284 2 14.8856 2 13 2H11C9.11438 2 8.17157 2 7.58579 2.58579C7 3.17157 7 4.11438 7 6V22"
+                stroke="currentColor"
+                stroke-width="1.5"
+              ></path>
+              <path
+                opacity="0.5"
+                d="M21 22V8.5C21 7.09554 21 6.39331 20.6629 5.88886C20.517 5.67048 20.3295 5.48298 20.1111 5.33706C19.6067 5 18.9045 5 17.5 5"
+                stroke="currentColor"
+                stroke-width="1.5"
+              ></path>
+              <path
+                opacity="0.5"
+                d="M3 22V8.5C3 7.09554 3 6.39331 3.33706 5.88886C3.48298 5.67048 3.67048 5.48298 3.88886 5.33706C4.39331 5 5.09554 5 6.5 5"
+                stroke="currentColor"
+                stroke-width="1.5"
+              ></path>
+              <path
+                d="M12 22V19"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+              <path
+                opacity="0.5"
+                d="M10 12H14"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+              <path
+                opacity="0.5"
+                d="M5.5 11H7"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+              <path
+                opacity="0.5"
+                d="M5.5 14H7"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+              <path
+                opacity="0.5"
+                d="M17 11H18.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+              <path
+                opacity="0.5"
+                d="M17 14H18.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+              <path
+                opacity="0.5"
+                d="M5.5 8H7"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+              <path
+                opacity="0.5"
+                d="M17 8H18.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+              <path
+                opacity="0.5"
+                d="M10 15H14"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+              <path
+                d="M12 9V5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M14 7L10 7"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </g>
+          </svg>
+
+          <h1 class="sitename">RSCM</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="beranda.html" class="active">Beranda</a></li>
+            <li class="dropdown">
+              <a href="#"
+                ><span>Tentang Kami</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li><a href="sejarah.html">Sejarah</a></li>
+                <li>
+                  <a href="visimisi.html">Visi, Misi dan Nilai Budaya</a>
+                </li>
+                <li><a href="direksi.html">Direksi</a></li>
+                <li><a href="denahlokasi.html">Denah dan Lokasi</a></li>
+                <li>
+                  <a href="klinikspesialis.html"
+                    >Klinik Spesialis dan Departemen</a
+                  >
+                </li>
+                <li><a href="pendidikan.html">Pendidikan</a></li>
+                <li><a href="penelitian.html">Penelitian</a></li>
+                <li><a href="kerjasama.html">Kerjasama</a></li>
+                <li><a href="maklumatpelayanan.html">Maklumat Pelayanan</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#"
+                ><span>Fasilitas dan Layanan</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li><a href="layanan-unggulan.html">Layanan Unggulan</a></li>
+                <li>
+                  <a href="rawat-jalan.html">Rawat Jalan</a>
+                </li>
+                <li><a href="rawat-inap.html">Rawat Inap</a></li>
+                <li>
+                  <a href="pelayanan-penunjang.html">Pelayanan Penunjang</a>
+                </li>
+                <li><a href="fasilitas.html">Fasilitas</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#"
+                ><span>Jadwal Dokter</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li><a href="jadwalRSCM.html">Jadwal Dokter RSCM</a></li>
+                <li>
+                  <a href="jadwalKencana.html">Jadwal Dokter RSCM Kencana</a>
+                </li>
+                <li>
+                  <a href="jadwalTele.html">Jadwal Terkonsultasi Dokter RSCM Kencana</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#"
+                ><span>Pasien dan Pengunjung</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li>
+                  <a href="survei-kepuasan.html">Survei Kepuasan Masyarakat</a>
+                </li>
+                <li>
+                  <a href="pendaftaran-online.html"
+                    >Pendaftaran Online Pasien</a
+                  >
+                </li>
+                <li>
+                  <a href="tata-tertib.html">Tata Tertib & Jam Berkunjung </a>
+                </li>
+                <li><a href="jadwal-poliklinik.html">Jadwal Poliklinik</a></li>
+                <li>
+                  <a href="tarif-pelayanan.html">Tarif Pelayanan</a>
+                </li>
+                <li>
+                  <a href="rujukan-gawat.html">Rujukan Gawat Darurat</a>
+                </li>
+                <li><a href="alur-donasi.html">Alur Donasi</a></li>
+                <li>
+                  <a href="404.html">Cara Pendaftaran Melalui Apk RSCMKu</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#"
+                ><span>Informasi Lain</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li><a href="#">Karir</a></li>
+                <li><a href="informasi-publik.html">Informasi Publik</a></li>
+                <li><a href="#">Rujukan Nasional</a></li>
+              </ul>
+            </li>
+            <li><a href="bantuan.html">Bantuan</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title">
+      <div class="breadcrumbs">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="beranda.html"><i class="bi bi-house"></i> Beranda</a></li>
+            <li class="breadcrumb-item"><a href="beranda.html">Jadwal Dokter</a></li>
+            <li class="breadcrumb-item"><a href="jadwalTele.html">Jadwal Telekonsultasi Dokter RSCM Kencana</a></li>
+            <li class="breadcrumb-item active current">Detail</li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="title-wrapper">
+        <h1>Dokter</h1>
+        <p>Kami memiliki dokter dengan berbagai spesialisasi yang siap memberikan perawatan terbaik bagi kesehatan Anda.</p>
+      </div>
+    </div><!-- End Page Title -->
+
+<!-- Doctors Section -->
+    <section id="doctors" class="doctors section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="doctor-card">
+              <div class="doctor-image">
+                <img src="assets/img/health/staff-12.webp" alt="dr. Indira Laksmi Gamayanti" class="img-fluid">
+                <div class="doctor-overlay">
+                  <div class="doctor-social">
+                    <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-envelope"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="doctor-content">
+                <h4 class="doctor-name">dr. Indira Laksmi Gamayanti</h4>
+                <span class="doctor-specialty">Spesialis</span>
+                <div class="doctor-experience">
+                  <span class="experience-badge">
+                    <i class="fa-solid fa-suitcase"></i> 9+ Tahun
+                  </span>
+                </div>
+                <button class="btn-appointment" onclick="showSchedule('dr. Indira Laksmi Gamayanti', 'Spesialis', 'schedule1')">Lihat Jadwal</button>
+                <a href="appointment.html" class="btn-make-appointment">Buat Janji Temu</a>
+              </div>
+            </div>
+          </div><!-- End Doctor Card -->
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="doctor-card">
+              <div class="doctor-image">
+                <img src="assets/img/health/staff-2.webp" alt="Prof. Dr. dr. Rini Sekartini" class="img-fluid">
+                <div class="doctor-overlay">
+                  <div class="doctor-social">
+                    <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-envelope"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="doctor-content">
+                <h4 class="doctor-name">Prof. Dr. dr. Rini Sekartini</h4>
+                <span class="doctor-specialty">Spesialis</span>
+                <div class="doctor-experience">
+                  <span class="experience-badge">
+                    <i class="fa-solid fa-suitcase"></i> 23+ Tahun
+                  </span>
+                </div>
+                <button class="btn-appointment" onclick="showSchedule('Prof. Dr. dr. Rini Sekartini', 'Spesialis', 'schedule2')">Lihat Jadwal</button>
+                <a href="appointment.html" class="btn-make-appointment">Buat Janji Temu</a>
+              </div>
+            </div>
+          </div><!-- End Doctor Card -->
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="doctor-card">
+              <div class="doctor-image">
+                <img src="assets/img/health/staff-7.webp" alt="dr. Kishore Kumar Deepak" class="img-fluid">
+                <div class="doctor-overlay">
+                  <div class="doctor-social">
+                    <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-envelope"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="doctor-content">
+                <h4 class="doctor-name">dr. Kishore Kumar Deepak</h4>
+                <span class="doctor-specialty">Spesialis</span>
+                <div class="doctor-experience">
+                  <span class="experience-badge">
+                    <i class="fa-solid fa-suitcase"></i> 15+ Tahun
+                  </span>
+                </div>
+                <button class="btn-appointment" onclick="showSchedule('dr. Kishore Kumar Deepak', 'Spesialis', 'schedule3')">Lihat Jadwal</button>
+                <a href="appointment.html" class="btn-make-appointment">Buat Janji Temu</a>
+              </div>
+            </div>
+          </div><!-- End Doctor Card -->
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="doctor-card">
+              <div class="doctor-image">
+                <img src="assets/img/health/staff-5.webp" alt="dr. Piprim Basarah Yanuarso" class="img-fluid">
+                <div class="doctor-overlay">
+                  <div class="doctor-social">
+                    <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-envelope"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="doctor-content">
+                <h4 class="doctor-name">dr. Piprim Basarah Yanuarso</h4>
+                <span class="doctor-specialty">Spesialis</span>
+                <div class="doctor-experience">
+                  <span class="experience-badge">
+                    <i class="fa-solid fa-suitcase"></i> 26+ Tahun
+                  </span>
+                </div>
+                <button class="btn-appointment" onclick="showSchedule('dr. Piprim Basarah Yanuarso', 'Spesialis', 'schedule4')">Lihat Jadwal</button>
+                <a href="appointment.html" class="btn-make-appointment">Buat Janji Temu</a>
+              </div>
+            </div>
+          </div><!-- End Doctor Card -->
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="doctor-card">
+              <div class="doctor-image">
+                <img src="assets/img/health/staff-14.webp" alt="dr. Badriul Hegar" class="img-fluid">
+                <div class="doctor-overlay">
+                  <div class="doctor-social">
+                    <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-envelope"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="doctor-content">
+                <h4 class="doctor-name">dr. Badriul Hegar</h4>
+                <span class="doctor-specialty">Spesialis</span>
+                <div class="doctor-experience">
+                  <span class="experience-badge">
+                    <i class="fa-solid fa-suitcase"></i> 12+ Tahun
+                  </span>
+                </div>
+                <button class="btn-appointment" onclick="showSchedule('dr. Badriul Hegar', 'Spesialis', 'schedule5')">Lihat Jadwal</button>
+                <a href="appointment.html" class="btn-make-appointment">Buat Janji Temu</a>
+              </div>
+            </div>
+          </div><!-- End Doctor Card -->
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="doctor-card">
+              <div class="doctor-image">
+                <img src="assets/img/health/staff-3.webp" alt="dr. Damayanti Rusli Sjarif" class="img-fluid">
+                <div class="doctor-overlay">
+                  <div class="doctor-social">
+                    <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-envelope"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="doctor-content">
+                <h4 class="doctor-name">dr. Damayanti Rusli Sjarif</h4>
+                <span class="doctor-specialty">Spesialis</span>
+                <div class="doctor-experience">
+                  <span class="experience-badge">
+                    <i class="fa-solid fa-suitcase"></i> 19+ Tahun
+                  </span>
+                </div>
+                <button class="btn-appointment" onclick="showSchedule('dr. Damayanti Rusli Sjarif', 'Spesialis', 'schedule6')">Lihat Jadwal</button>
+                <a href="appointment.html" class="btn-make-appointment">Buat Janji Temu</a>
+              </div>
+            </div>
+          </div><!-- End Doctor Card -->
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="doctor-card">
+              <div class="doctor-image">
+                <img src="assets/img/health/staff-11.webp" alt="dr. Conny Tanjung" class="img-fluid">
+                <div class="doctor-overlay">
+                  <div class="doctor-social">
+                    <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-envelope"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="doctor-content">
+                <h4 class="doctor-name">dr. Conny Tanjung</h4>
+                <span class="doctor-specialty">Spesialis</span>
+                <div class="doctor-experience">
+                  <span class="experience-badge">
+                    <i class="fa-solid fa-suitcase"></i> 8+ Tahun
+                  </span>
+                </div>
+                <button class="btn-appointment" onclick="showSchedule('dr. Conny Tanjung', 'Spesialis', 'schedule7')">Lihat Jadwal</button>
+                <a href="appointment.html" class="btn-make-appointment">Buat Janji Temu</a>
+              </div>
+            </div>
+          </div><!-- End Doctor Card -->
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="doctor-card">
+              <div class="doctor-image">
+                <img src="assets/img/health/staff-9.webp" alt="Prof. Dr. dr. Soedjatmiko Soeharso" class="img-fluid">
+                <div class="doctor-overlay">
+                  <div class="doctor-social">
+                    <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-envelope"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="doctor-content">
+                <h4 class="doctor-name">Prof. Dr. dr. Soedjatmiko Soeharso</h4>
+                <span class="doctor-specialty">Spesialis</span>
+                <div class="doctor-experience">
+                  <span class="experience-badge">
+                    <i class="fa-solid fa-suitcase"></i> 28+ Tahun
+                  </span>
+                </div>
+                <button class="btn-appointment" onclick="showSchedule('Prof. Dr. dr. Soedjatmiko Soeharso', 'Spesialis', 'schedule8')">Lihat Jadwal</button>
+                <a href="appointment.html" class="btn-make-appointment">Buat Janji Temu</a>
+              </div>
+            </div>
+          </div><!-- End Doctor Card -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Doctors Section -->
+
+  </main>
+
+  <!-- Schedule Modal -->
+  <div id="scheduleModal" class="schedule-modal">
+    <div class="schedule-modal-content">
+      <div class="schedule-modal-header">
+        <h3 class="schedule-modal-title">Jadwal Praktek</h3>
+        <button class="close-btn" onclick="closeSchedule()">&times;</button>
+      </div>
+      <div class="doctor-info">
+        <h4 id="modalDoctorName"></h4>
+        <p id="modalDoctorSpecialty"></p>
+      </div>
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Hari</th>
+            <th>Jam Praktek</th>
+          </tr>
+        </thead>
+        <tbody id="scheduleTableBody">
+          <!-- Schedule will be populated here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+    <footer id="footer" class="footer position-relative light-background">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="beranda.html" class="logo d-flex align-items-center">
+              <img
+                src="assets/img/logo/rscm.png"
+                alt="rscm Logo"
+                style="height: 120px; max-width: 100%; object-fit: contain"
+              />
+            </a>
+            <div class="footer-contact pt-3">
+              <p style="text-align: justify">
+                Rumah sakit pemerintah yang terletak di Jakarta Pusat,
+                Indonesia. Selain menjadi RS pemerintah RSCM juga berfungsi
+                sebagai RS pendidikan, salah satunya adalah Fakultas Kedokteran
+                Universitas Indonesia. Nama rumah sakit ini diambil dari nama
+                Dr. Tjipto Mangoenkoesoemo, seorang tokoh perjuangan Indonesia
+                pada masa kolonial.
+              </p>
+              <a class="btn-getstarted" href="#">Selengkapnya...</a>
+            </div>
+            <div class="social-links d-flex mt-4">
+              <a
+                href="https://www.facebook.com/RSUPNCM/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/rscm.official/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a
+                href="https://x.com/rscm_official"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/channel/UCgMuwHf1wmkHCIxlQoUTtnQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="bi bi-youtube"></i
+              ></a>
+              <a
+                href="https://open.spotify.com/show/3GQ1TTcXFyGCXh6OdHXr46?si=fe6c9687fbac43f7&nd=1&dlsi=4eb7c8f225654825"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="bi bi-spotify"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Kebijakan dan Ketentuan</h4>
+            <ul>
+              <li><a href="#">Kebijakan Privasi dari SDM</a></li>
+              <li><a href="#">Kebijakan Privasi RSCMku</a></li>
+              <li><a href="#">Syarat dan Ketentuan</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Berita Terbaru</h4>
+            <ul>
+              <li>
+                <p>
+                  <a href="404.html" style="text-align: justify">
+                    RSCM menandatangani Nota Kesepakatan bersama Pemerintah
+                    Kabupaten Bojonegoro dalam rangka peningkatan pelayanan
+                    kesehatan </a
+                  ><br />
+                  <small><em>24 Mei 2025 10:31</em></small>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="404.html" style="text-align: justify">
+                    Peringatan World Nurse Day </a
+                  ><br />
+                  <small><em>19 Mei 2025 11:26</em></small>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="404.html" style="text-align: justify">
+                    Penandatanganan Perjanjian Kerjasama Medical Check Up
+                    Bersama DPRD Provinsi Kalimantan Utara </a
+                  ><br />
+                  <small><em>29 April 2025 08:31</em></small>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="404.html" style="text-align: justify">
+                    RSCM Raih Penghargaan dari Badan POM dalam pengembangan
+                    produk terapi sel punca berbasis ATMP </a
+                  ><br />
+                  <small><em>21 April 2025 15:17</em></small>
+                </p>
+              </li>
+            </ul>
+            <a class="btn-getstarted" href="404.html">Selengkapnya...</a>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Kontak Kami</h4>
+            <ul class="list-unstyled">
+              <li class="mb-3 d-flex align-items-center">
+                <i class="bi bi-geo-alt fs-5 me-3"></i>
+                <a
+                  href="https://maps.app.goo.gl/maCLkcv3YEpou6wL6"
+                  target="_blank"
+                  >Jl. Diponegoro, No. 71, Jakarta</a
+                >
+              </li>
+              <li class="mb-3 d-flex align-items-center">
+                <i class="bi bi-envelope fs-5 me-3"></i>
+                <a href="mailto:info@rscm.co.id">info@rscm.co.id</a>
+              </li>
+              <li class="mb-3 d-flex align-items-center">
+                <i class="bi bi-phone fs-5 me-3"></i>
+                <a href="tel:1500135">Telepon: 1500 135</a>
+              </li>
+              <li class="mb-3 d-flex align-items-center">
+                <i class="bi bi-code-slash fs-5 me-3"></i>
+                <a
+                  href="https://rscm.co.id/sitemaps/sitemap.xml"
+                  target="_blank"
+                  >Sitemap</a
+                >
+              </li>
+              <li class="d-flex align-items-center">
+                <i class="bi bi-chat-dots fs-5 me-3"></i>
+                <a href="bantuan.html">FAQ</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Didukung oleh</h4>
+            <div style="display: flex; flex-direction: column; gap: 10px">
+              <img
+                src="assets/img/logo/kars.png"
+                alt="Logo KARS"
+                style="max-width: 100%; height: auto"
+              />
+              <img
+                src="assets/img/logo/Quality.png"
+                alt="Logo Quality"
+                style="max-width: 100%; height: auto"
+              />
+              <img
+                src="assets/img/logo/Kemeskes.png"
+                alt="Logo Kemenkes"
+                style="max-width: 100%; height: auto"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span>
+          <strong class="px-1 sitename">Kelompok 8 3SI2</strong>
+          <span>All Rights Reserved</span>
+        </p>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by <a href="https://www.stis.ac.id/">Kelompok 8 3SI2</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+  <script>
+    // Doctor schedules data
+    const doctorSchedules = {
+      schedule1: {
+        'Senin': '08:00 - 12:00 WIB',
+        'Selasa': '14:00 - 18:00 WIB',
+        'Rabu': '-',
+        'Kamis': '08:00 - 12:00 WIB',
+        'Jumat': '14:00 - 17:00 WIB',
+        'Sabtu': '09:00 - 13:00 WIB',
+        'Minggu': '-'
+      },
+      schedule2: {
+        'Senin': '09:00 - 13:00 WIB',
+        'Selasa': '-',
+        'Rabu': '14:00 - 18:00 WIB',
+        'Kamis': '09:00 - 13:00 WIB',
+        'Jumat': '14:00 - 17:00 WIB',
+        'Sabtu': '-',
+        'Minggu': '-'
+      },
+      schedule3: {
+        'Senin': '07:00 - 11:00 WIB',
+        'Selasa': '13:00 - 17:00 WIB',
+        'Rabu': '07:00 - 11:00 WIB',
+        'Kamis': '-',
+        'Jumat': '13:00 - 16:00 WIB',
+        'Sabtu': '08:00 - 12:00 WIB',
+        'Minggu': '-'
+      },
+      schedule4: {
+        'Senin': '10:00 - 14:00 WIB',
+        'Selasa': '15:00 - 19:00 WIB',
+        'Rabu': '10:00 - 14:00 WIB',
+        'Kamis': '15:00 - 19:00 WIB',
+        'Jumat': '-',
+        'Sabtu': '09:00 - 13:00 WIB',
+        'Minggu': '-'
+      },
+      schedule5: {
+        'Senin': '08:00 - 12:00 WIB',
+        'Selasa': '14:00 - 18:00 WIB',
+        'Rabu': '08:00 - 12:00 WIB',
+        'Kamis': '14:00 - 18:00 WIB',
+        'Jumat': '08:00 - 12:00 WIB',
+        'Sabtu': '-',
+        'Minggu': '-'
+      },
+      schedule6: {
+        'Senin': '09:00 - 13:00 WIB',
+        'Selasa': '14:00 - 17:00 WIB',
+        'Rabu': '-',
+        'Kamis': '09:00 - 13:00 WIB',
+        'Jumat': '14:00 - 17:00 WIB',
+        'Sabtu': '10:00 - 14:00 WIB',
+        'Minggu': '-'
+      },
+      schedule7: {
+        'Senin': '08:00 - 12:00 WIB',
+        'Selasa': '-',
+        'Rabu': '14:00 - 18:00 WIB',
+        'Kamis': '08:00 - 12:00 WIB',
+        'Jumat': '14:00 - 17:00 WIB',
+        'Sabtu': '-',
+        'Minggu': '-'
+      },
+      schedule8: {
+        'Senin': '07:00 - 11:00 WIB',
+        'Selasa': '13:00 - 17:00 WIB',
+        'Rabu': '07:00 - 11:00 WIB',
+        'Kamis': '13:00 - 17:00 WIB',
+        'Jumat': '-',
+        'Sabtu': '08:00 - 12:00 WIB',
+        'Minggu': '-'
+      }
+    };
+
+    function showSchedule(doctorName, specialty, scheduleKey) {
+      // Set doctor info
+      document.getElementById('modalDoctorName').textContent = doctorName;
+      document.getElementById('modalDoctorSpecialty').textContent = specialty;
+      
+      // Get schedule data
+      const schedule = doctorSchedules[scheduleKey];
+      
+      // Build schedule table
+      const tableBody = document.getElementById('scheduleTableBody');
+      tableBody.innerHTML = '';
+      
+      const days = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu'];
+      
+      days.forEach(day => {
+        const row = document.createElement('tr');
+        const dayCell = document.createElement('td');
+        const timeCell = document.createElement('td');
+        
+        dayCell.textContent = day;
+        timeCell.textContent = schedule[day];
+        
+        // Add styling based on availability
+        if (schedule[day] === '-') {
+          timeCell.classList.add('schedule-unavailable');
+        } else {
+          timeCell.classList.add('schedule-available');
+        }
+        
+        row.appendChild(dayCell);
+        row.appendChild(timeCell);
+        tableBody.appendChild(row);
+      });
+      
+      // Show modal
+      document.getElementById('scheduleModal').style.display = 'block';
+    }
+
+    function closeSchedule() {
+      document.getElementById('scheduleModal').style.display = 'none';
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+      const modal = document.getElementById('scheduleModal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeSchedule();
+      }
+    });
+  </script>
+  </body>
+</html>
+
+
+  

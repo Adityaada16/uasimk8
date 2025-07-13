@@ -41,53 +41,55 @@
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
-    <style>
-    .construction-icon {
-      font-size: 4rem;
+
+     <style>
+    /* Custom styling for specialty icons */
+    .specialty-icon {
+      font-size: 3rem;
       color: var(--accent-color);
-      margin-bottom: 1rem;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
     }
     
-    .status-badge {
-      background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), transparent 25%));
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-weight: 500;
-      margin-bottom: 1rem;
-      display: inline-block;
+    .specialty-card {
+      transition: transform 0.3s ease;
+      height: 100%;
     }
     
-    .progress-info {
-      background: #f8f9fa;
-      border-left: 4px solid var(--accent-color);
-      padding: 1rem;
-      margin: 1.5rem 0;
-      border-radius: 5px;
+    .specialty-card:hover {
+      transform: translateY(-5px);
     }
     
-    .expected-timeline {
-      background: #e3f2fd;
-      border: 1px solid #90caf9;
-      padding: 1rem;
-      border-radius: 8px;
-      margin: 1rem 0;
+    .specialty-card .card-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
-    .btn-outline-primary {
+    .btn-view-all {
+  display: inline-block;
+  background: transparent;
   color: var(--accent-color);
-  border-color: var(--accent-color);
-  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.btn-outline-primary:hover,
-.btn-outline-primary:focus {
-  color: #fff;
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
+.btn-view-all:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 60%);
 }
   </style>
 
+  
     <!-- =======================================================
   * Template Name: MediTrust
   * Template URL: https://bootstrapmade.com/meditrust-bootstrap-hospital-website-template/
@@ -320,7 +322,7 @@
                 <i class="bi bi-chevron-down toggle-dropdown"></i
               ></a>
               <ul>
-                <li><a href="karir.html">Karir</a></li>
+                <li><a href="#">Karir</a></li>
                 <li><a href="informasi-publik.html">Informasi Publik</a></li>
                 <li><a href="#">Rujukan Nasional</a></li>
               </ul>
@@ -339,82 +341,309 @@
       <div class="breadcrumbs">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house"></i> Beranda</a></li>
-            <li class="breadcrumb-item"><a href="#">Halaman</a></li>
-            <li class="breadcrumb-item active current">Sedang Dikembangkan</li>
+            <li class="breadcrumb-item"><a href="beranda.html"><i class="bi bi-house"></i> Beranda</a></li>
+            <li class="breadcrumb-item"><a href="beranda.html">Jadwal Dokter</a></li>
+            <li class="breadcrumb-item active current">Jadwal Dokter RSCM</li>
           </ol>
         </nav>
       </div>
 
       <div class="title-wrapper">
-        <h1>Halaman Sedang Dikembangkan</h1>
-        <p>Halaman ini sedang dalam proses pengembangan untuk memberikan pengalaman terbaik bagi Anda.</p>
+        <h1>Spesialisasi</h1>
+        <p>Pilih bidang spesialis yang ingin dicari. </p>
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Under Construction Section -->
-    <section id="under-construction" class="error-404 section">
+    <!-- Specialties Section -->
+    <section id="specialties" class="specialties section">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="text-center">
-          <div class="status-badge" data-aos="fade-up" data-aos-delay="200">
-            🚧 DALAM PENGEMBANGAN
-          </div>
-
-          <div class="error-icon mb-4" data-aos="zoom-in" data-aos-delay="300">
-            <i class="bi bi-tools construction-icon"></i>
-          </div>
-
-          <h2 class="error-title mb-3" data-aos="fade-up" data-aos-delay="400">
-            Kami Sedang Menyiapkan Sesuatu yang Istimewa
-          </h2>
-
-          <p class="error-text mb-4" data-aos="fade-up" data-aos-delay="500">
-            Halaman ini sedang dalam tahap pengembangan. Tim kami bekerja keras untuk menyediakan konten dan fitur terbaik untuk Anda. Mohon bersabar menunggu ya!
-          </p>
-
-          <div class="progress-info" data-aos="fade-up" data-aos-delay="600">
-            <h5><i class="bi bi-info-circle text-primary"></i> Apa yang Sedang Kami Kerjakan?</h5>
-            <ul class="text-start mt-3">
-              <li>✅ Mendesain tampilan yang user-friendly</li>
-              <li>⏳ Mengembangkan fitur-fitur baru</li>
-              <li>⏳ Melakukan pengujian kualitas</li>
-              <li>⏳ Menyiapkan konten dan dokumen yang informatif</li>
-            </ul>
-          </div>
-
-          <div class="expected-timeline" data-aos="fade-up" data-aos-delay="700">
-            <h6><i class="bi bi-calendar-event text-info"></i> Perkiraan Waktu Penyelesaian</h6>
-            <p class="mb-0">Halaman ini diperkirakan akan selesai dalam <strong>jangka waktu yang belum ditentukan</strong>. Kami akan segera mengumumkan ketika sudah siap!</p>
-          </div>
-
+        <div class="row gy-4">
           
+    <!-- Spesialis Akupuntur -->
+<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+  <div class="card specialty-card h-100">
+    <div class="card-body">
+      <div class="specialty-icon">
+        <i class="fas fa-syringe"></i>
+      </div>
+      <h4 class="card-title">Spesialis Akupuntur</h4>
+      <a href="dokterRSCM.html" class="btn btn-view-all">Lihat Dokter</a>
+    </div>
+  </div>
+</div>
 
-          <div class="error-action" data-aos="fade-up" data-aos-delay="900">
-            <a href="beranda.html" class="btn btn-primary me-2">
-              <i class="bi bi-house"></i> Kembali ke Beranda
-            </a>
-            <a href="bantuan.html" class="btn btn-outline-primary">
-              <i class="bi bi-envelope"></i> Hubungi Kami
-            </a>
-          </div>
+<!-- Spesialis Anak -->
+<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+  <div class="card specialty-card h-100">
+    <div class="card-body">
+      <div class="specialty-icon">
+        <i class="fas fa-child"></i>
+      </div>
+      <h4 class="card-title">Spesialis Anak</h4>
+      <a href="dokterRSCM.html" class="btn btn-view-all">Lihat Dokter</a>
+    </div>
+  </div>
+</div>
 
-          <div class="mt-4" data-aos="fade-up" data-aos-delay="1000">
-            <p class="text-muted">
-              <small><i class="bi bi-bell"></i> Ingin diberitahu ketika halaman ini selesai? <a href="bantuan.html">Hubungi kami</a> untuk mendapatkan notifikasi.</small>
-            </p>
-          </div>
+<!-- Spesialis Bedah -->
+<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+  <div class="card specialty-card h-100">
+    <div class="card-body">
+      <div class="specialty-icon">
+        <i class="fas fa-scissors"></i>
+      </div>
+      <h4 class="card-title">Spesialis Bedah</h4>
+      <a href="dokterRSCM.html" class="btn btn-view-all">Lihat Dokter</a>
+    </div>
+  </div>
+</div>
+
+<!-- Spesialis Bedah Saraf -->
+<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+  <div class="card specialty-card h-100">
+    <div class="card-body">
+      <div class="specialty-icon">
+        <i class="fas fa-brain"></i>
+      </div>
+      <h4 class="card-title">Spesialis Bedah Saraf</h4>
+      <a href="dokterRSCM.html" class="btn btn-view-all">Lihat Dokter</a>
+    </div>
+  </div>
+</div>
+
+<!-- Spesialis Gigi dan Mulut -->
+<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+  <div class="card specialty-card h-100">
+    <div class="card-body">
+      <div class="specialty-icon">
+        <i class="fas fa-tooth"></i>
+      </div>
+      <h4 class="card-title">Spesialis Gigi dan Mulut</h4>
+      <a href="dokterRSCM.html" class="btn btn-view-all">Lihat Dokter</a>
+    </div>
+  </div>
+</div>
+
+<!-- Spesialis Gizi Klinik -->
+<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+  <div class="card specialty-card h-100">
+    <div class="card-body">
+      <div class="specialty-icon">
+        <i class="fas fa-apple-alt"></i>
+      </div>
+      <h4 class="card-title">Spesialis Gizi Klinik</h4>
+      <a href="dokterRSCM.html" class="btn btn-view-all">Lihat Dokter</a>
+    </div>
+  </div>
+</div>
+
+<!-- Spesialis Kulit & Kelamin -->
+<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+  <div class="card specialty-card h-100">
+    <div class="card-body">
+      <div class="specialty-icon">
+        <i class="fas fa-capsules"></i>
+      </div>
+      <h4 class="card-title">Spesialis Kulit & Kelamin</h4>
+      <a href="dokterRSCM.html" class="btn btn-view-all">Lihat Dokter</a>
+    </div>
+  </div>
+</div>
+
+<!-- Spesialis Kebidanan dan Penyakit Kandungan -->
+<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+  <div class="card specialty-card h-100">
+    <div class="card-body">
+      <div class="specialty-icon">
+        <i class="fas fa-female"></i>
+      </div>
+      <h4 class="card-title">Spesialis Kebidanan & Kandungan</h4>
+      <a href="dokterRSCM.html" class="btn btn-view-all">Lihat Dokter</a>
+    </div>
+  </div>
+</div>
+
+<!-- Spesialis Kedokteran Nuklir -->
+<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+  <div class="card specialty-card h-100">
+    <div class="card-body">
+      <div class="specialty-icon">
+        <i class="fa-solid fa-radiation"></i>
+      </div>
+      <h4 class="card-title">Spesialis Kedokteran Nuklir</h4>
+      <a href="dokterRSCM.html" class="btn btn-view-all">Lihat Dokter</a>
+    </div>
+  </div>
+</div>
+
+<!-- Spesialis Mata -->
+<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+  <div class="card specialty-card h-100">
+    <div class="card-body">
+      <div class="specialty-icon">
+        <i class="fas fa-eye"></i>
+      </div>
+      <h4 class="card-title">Spesialis Mata</h4>
+      <a href="dokterRSCM.html" class="btn btn-view-all">Lihat Dokter</a>
+    </div>
+  </div>
+</div>
+
+<!-- Spesialis Orthopaedi & Traumatologi -->
+<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+  <div class="card specialty-card h-100">
+    <div class="card-body">
+      <div class="specialty-icon">
+        <i class="fas fa-bone"></i>
+      </div>
+      <h4 class="card-title">Spesialis Orthopaedi & Traumatologi</h4>
+      <a href="dokterRSCM.html" class="btn btn-view-all">Lihat Dokter</a>
+    </div>
+  </div>
+</div>
+
+<!-- Spesialis Penyakit Dalam -->
+<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+  <div class="card specialty-card h-100">
+    <div class="card-body">
+      <div class="specialty-icon">
+        <i class="fas fa-heart"></i>
+      </div>
+      <h4 class="card-title">Spesialis Penyakit Dalam</h4>
+      <a href="dokterRSCM.html" class="btn btn-view-all">Lihat Dokter</a>
+    </div>
+  </div>
+</div>
+
+<!-- Spesialis Psikiatri -->
+<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+  <div class="card specialty-card h-100">
+    <div class="card-body">
+      <div class="specialty-icon">
+        <i class="fa-solid fa-face-frown"></i>
+      </div>
+      <h4 class="card-title">Spesialis Psikiatri</h4>
+      <a href="dokterRSCM.html" class="btn btn-view-all">Lihat Dokter</a>
+    </div>
+  </div>
+</div>
+
+<!-- Spesialis Radiologi -->
+<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+  <div class="card specialty-card h-100">
+    <div class="card-body">
+      <div class="specialty-icon">
+        <i class="fas fa-camera"></i>
+      </div>
+      <h4 class="card-title">Spesialis Radiologi</h4>
+      <a href="dokterRSCM.html" class="btn btn-view-all">Lihat Dokter</a>
+    </div>
+  </div>
+</div>
+
+<!-- Spesialis Rehabilitasi Medik -->
+<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+  <div class="card specialty-card h-100">
+    <div class="card-body">
+      <div class="specialty-icon">
+        <i class="fas fa-wheelchair"></i>
+      </div>
+      <h4 class="card-title">Spesialis Rehabilitasi Medik</h4>
+      <a href="dokterRSCM.html" class="btn btn-view-all">Lihat Dokter</a>
+    </div>
+  </div>
+</div>
+
+<!-- Spesialis Syaraf -->
+<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+  <div class="card specialty-card h-100">
+    <div class="card-body">
+      <div class="specialty-icon">
+        <i class="fas fa-cogs"></i>
+      </div>
+      <h4 class="card-title">Spesialis Syaraf</h4>
+      <a href="dokterRSCM.html" class="btn btn-view-all">Lihat Dokter</a>
+    </div>
+  </div>
+</div>
+
+<!-- Spesialis THT-KL -->
+<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+  <div class="card specialty-card h-100">
+    <div class="card-body">
+      <div class="specialty-icon">
+        <i class="fas fa-ear-deaf"></i>
+      </div>
+      <h4 class="card-title">Spesialis THT-KL</h4>
+      <a href="dokterRSCM.html" class="btn btn-view-all">Lihat Dokter</a>
+    </div>
+  </div>
+</div>
+
+<!-- Spesialis Urologi -->
+<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+  <div class="card specialty-card h-100">
+    <div class="card-body">
+      <div class="specialty-icon">
+        <i class="fas fa-droplet"></i>
+      </div>
+      <h4 class="card-title">Spesialis Urologi</h4>
+      <a href="dokterRSCM.html" class="btn btn-view-all">Lihat Dokter</a>
+    </div>
+  </div>
+</div>
+
+<!-- Konsultan Jantung & Pembuluh Darah -->
+<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+  <div class="card specialty-card h-100">
+    <div class="card-body">
+      <div class="specialty-icon">
+        <i class="fas fa-heartbeat"></i>
+      </div>
+      <h4 class="card-title">Konsultan Jantung & Pembuluh Darah</h4>
+      <a href="dokterRSCM.html" class="btn btn-view-all">Lihat Dokter</a>
+    </div>
+  </div>
+</div>
+
+<!-- Spesialis Okupasi -->
+<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+  <div class="card specialty-card h-100">
+    <div class="card-body">
+      <div class="specialty-icon">
+        <i class="fas fa-briefcase"></i>
+      </div>
+      <h4 class="card-title">Spesialis Okupasi</h4>
+      <a href="dokterRSCM.html" class="btn btn-view-all">Lihat Dokter</a>
+    </div>
+  </div>
+</div>
+
+<!-- Spesialis Onkologi Radiasi -->
+<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+  <div class="card specialty-card h-100">
+    <div class="card-body">
+      <div class="specialty-icon">
+        <i class="fas fa-sun"></i>
+      </div>
+      <h4 class="card-title">Spesialis Onkologi Radiasi</h4>
+      <a href="dokterRSCM.html" class="btn btn-view-all">Lihat Dokter</a>
+    </div>
+  </div>
+</div>
+
 
         </div>
 
       </div>
 
-    </section><!-- /Under Construction Section -->
+    </section><!-- /Specialties Section -->
 
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
+   <footer id="footer" class="footer position-relative light-background">
       <div class="container footer-top">
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6 footer-about">
