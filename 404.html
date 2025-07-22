@@ -42,51 +42,55 @@
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
     <style>
-    .construction-icon {
-      font-size: 4rem;
-      color: var(--accent-color);
-      margin-bottom: 1rem;
-    }
-    
-    .status-badge {
-      background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), transparent 25%));
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-weight: 500;
-      margin-bottom: 1rem;
-      display: inline-block;
-    }
-    
-    .progress-info {
-      background: #f8f9fa;
-      border-left: 4px solid var(--accent-color);
-      padding: 1rem;
-      margin: 1.5rem 0;
-      border-radius: 5px;
-    }
-    
-    .expected-timeline {
-      background: #e3f2fd;
-      border: 1px solid #90caf9;
-      padding: 1rem;
-      border-radius: 8px;
-      margin: 1rem 0;
-    }
+      .construction-icon {
+        font-size: 4rem;
+        color: var(--accent-color);
+        margin-bottom: 1rem;
+      }
 
-    .btn-outline-primary {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
-  background-color: transparent;
-}
+      .status-badge {
+        background: linear-gradient(
+          135deg,
+          var(--accent-color),
+          color-mix(in srgb, var(--accent-color), transparent 25%)
+        );
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        display: inline-block;
+      }
 
-.btn-outline-primary:hover,
-.btn-outline-primary:focus {
-  color: #fff;
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-}
-  </style>
+      .progress-info {
+        background: #f8f9fa;
+        border-left: 4px solid var(--accent-color);
+        padding: 1rem;
+        margin: 1.5rem 0;
+        border-radius: 5px;
+      }
+
+      .expected-timeline {
+        background: #e3f2fd;
+        border: 1px solid #90caf9;
+        padding: 1rem;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+
+      .btn-outline-primary {
+        color: var(--accent-color);
+        border-color: var(--accent-color);
+        background-color: transparent;
+      }
+
+      .btn-outline-primary:hover,
+      .btn-outline-primary:focus {
+        color: #fff;
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+      }
+    </style>
 
     <!-- =======================================================
   * Template Name: MediTrust
@@ -103,7 +107,7 @@
         class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
       >
         <a
-          href="beranda.html"
+          href="index.html"
           class="logo d-flex align-items-center me-auto me-xl-0"
         >
           <!-- Uncomment the line below if you also wish to use an image logo -->
@@ -228,7 +232,7 @@
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="beranda.html" class="active">Beranda</a></li>
+            <li><a href="index.html" class="active">Beranda</a></li>
             <li class="dropdown">
               <a href="#"
                 ><span>Tentang Kami</span>
@@ -280,7 +284,9 @@
                   <a href="jadwalKencana.html">Jadwal Dokter RSCM Kencana</a>
                 </li>
                 <li>
-                  <a href="jadwalTele.html">Jadwal Telekonsultasi Dokter RSCM Kencana</a>
+                  <a href="jadwalTele.html"
+                    >Jadwal Telekonsultasi Dokter RSCM Kencana</a
+                  >
                 </li>
               </ul>
             </li>
@@ -332,93 +338,121 @@
       </div>
     </header>
 
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title">
-      <div class="breadcrumbs">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="beranda.html"><i class="bi bi-house"></i> Beranda</a></li>
-            <li class="breadcrumb-item"><a href="#">Halaman</a></li>
-            <li class="breadcrumb-item active current">Sedang Dikembangkan</li>
-          </ol>
-        </nav>
-      </div>
-
-      <div class="title-wrapper">
-        <h1>Halaman Sedang Dikembangkan</h1>
-        <p>Halaman ini sedang dalam proses pengembangan untuk memberikan pengalaman terbaik bagi Anda.</p>
-      </div>
-    </div><!-- End Page Title -->
-
-    <!-- Under Construction Section -->
-    <section id="under-construction" class="error-404 section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="text-center">
-          <div class="status-badge" data-aos="fade-up" data-aos-delay="200">
-            🚧 DALAM PENGEMBANGAN
-          </div>
-
-          <div class="error-icon mb-4" data-aos="zoom-in" data-aos-delay="300">
-            <i class="bi bi-tools construction-icon"></i>
-          </div>
-
-          <h2 class="error-title mb-3" data-aos="fade-up" data-aos-delay="400">
-            Kami Sedang Menyiapkan Sesuatu yang Istimewa
-          </h2>
-
-          <p class="error-text mb-4" data-aos="fade-up" data-aos-delay="500">
-            Halaman ini sedang dalam tahap pengembangan. Tim kami bekerja keras untuk menyediakan konten dan fitur terbaik untuk Anda. Mohon bersabar menunggu ya!
-          </p>
-
-          <div class="progress-info" data-aos="fade-up" data-aos-delay="600">
-            <h5><i class="bi bi-info-circle text-primary"></i> Apa yang Sedang Kami Kerjakan?</h5>
-            <ul class="text-start mt-3">
-              <li>✅ Mendesain tampilan yang user-friendly</li>
-              <li>⏳ Mengembangkan fitur-fitur baru</li>
-              <li>⏳ Melakukan pengujian kualitas</li>
-              <li>⏳ Menyiapkan konten dan dokumen yang informatif</li>
-            </ul>
-          </div>
-
-          <div class="expected-timeline" data-aos="fade-up" data-aos-delay="700">
-            <h6><i class="bi bi-calendar-event text-info"></i> Perkiraan Waktu Penyelesaian</h6>
-            <p class="mb-0">Halaman ini diperkirakan akan selesai dalam <strong>jangka waktu yang belum ditentukan</strong>. Kami akan segera mengumumkan ketika sudah siap!</p>
-          </div>
-
-          
-
-          <div class="error-action" data-aos="fade-up" data-aos-delay="900">
-            <a href="beranda.html" class="btn btn-primary me-2">
-              <i class="bi bi-house"></i> Kembali ke Beranda
-            </a>
-            <a href="bantuan.html" class="btn btn-outline-primary">
-              <i class="bi bi-envelope"></i> Hubungi Kami
-            </a>
-          </div>
-
-          <div class="mt-4" data-aos="fade-up" data-aos-delay="1000">
-            <p class="text-muted">
-              <small><i class="bi bi-bell"></i> Ingin diberitahu ketika halaman ini selesai? <a href="bantuan.html">Hubungi kami</a> untuk mendapatkan notifikasi.</small>
-            </p>
-          </div>
-
+    <main class="main">
+      <!-- Page Title -->
+      <div class="page-title">
+        <div class="breadcrumbs">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="index.html"><i class="bi bi-house"></i> Beranda</a>
+              </li>
+              <li class="breadcrumb-item"><a href="#">Halaman</a></li>
+              <li class="breadcrumb-item active current">
+                Sedang Dikembangkan
+              </li>
+            </ol>
+          </nav>
         </div>
 
+        <div class="title-wrapper">
+          <h1>Halaman Sedang Dikembangkan</h1>
+          <p>
+            Halaman ini sedang dalam proses pengembangan untuk memberikan
+            pengalaman terbaik bagi Anda.
+          </p>
+        </div>
       </div>
+      <!-- End Page Title -->
 
-    </section><!-- /Under Construction Section -->
+      <!-- Under Construction Section -->
+      <section id="under-construction" class="error-404 section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-center">
+            <div class="status-badge" data-aos="fade-up" data-aos-delay="200">
+              🚧 DALAM PENGEMBANGAN
+            </div>
 
-  </main>
+            <div
+              class="error-icon mb-4"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
+              <i class="bi bi-tools construction-icon"></i>
+            </div>
 
-  <footer id="footer" class="footer position-relative light-background">
+            <h2
+              class="error-title mb-3"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              Kami Sedang Menyiapkan Sesuatu yang Istimewa
+            </h2>
+
+            <p class="error-text mb-4" data-aos="fade-up" data-aos-delay="500">
+              Halaman ini sedang dalam tahap pengembangan. Tim kami bekerja
+              keras untuk menyediakan konten dan fitur terbaik untuk Anda. Mohon
+              bersabar menunggu ya!
+            </p>
+
+            <div class="progress-info" data-aos="fade-up" data-aos-delay="600">
+              <h5>
+                <i class="bi bi-info-circle text-primary"></i> Apa yang Sedang
+                Kami Kerjakan?
+              </h5>
+              <ul class="text-start mt-3">
+                <li>✅ Mendesain tampilan yang user-friendly</li>
+                <li>⏳ Mengembangkan fitur-fitur baru</li>
+                <li>⏳ Melakukan pengujian kualitas</li>
+                <li>⏳ Menyiapkan konten dan dokumen yang informatif</li>
+              </ul>
+            </div>
+
+            <div
+              class="expected-timeline"
+              data-aos="fade-up"
+              data-aos-delay="700"
+            >
+              <h6>
+                <i class="bi bi-calendar-event text-info"></i> Perkiraan Waktu
+                Penyelesaian
+              </h6>
+              <p class="mb-0">
+                Halaman ini diperkirakan akan selesai dalam
+                <strong>jangka waktu yang belum ditentukan</strong>. Kami akan
+                segera mengumumkan ketika sudah siap!
+              </p>
+            </div>
+
+            <div class="error-action" data-aos="fade-up" data-aos-delay="900">
+              <a href="index.html" class="btn btn-primary me-2">
+                <i class="bi bi-house"></i> Kembali ke Beranda
+              </a>
+              <a href="bantuan.html" class="btn btn-outline-primary">
+                <i class="bi bi-envelope"></i> Hubungi Kami
+              </a>
+            </div>
+
+            <div class="mt-4" data-aos="fade-up" data-aos-delay="1000">
+              <p class="text-muted">
+                <small
+                  ><i class="bi bi-bell"></i> Ingin diberitahu ketika halaman
+                  ini selesai? <a href="bantuan.html">Hubungi kami</a> untuk
+                  mendapatkan notifikasi.</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Under Construction Section -->
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
       <div class="container footer-top">
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6 footer-about">
-            <a href="beranda.html" class="logo d-flex align-items-center">
+            <a href="index.html" class="logo d-flex align-items-center">
               <img
                 src="assets/img/logo/rscm.png"
                 alt="rscm Logo"
@@ -593,7 +627,7 @@
           Designed by <a href="https://www.stis.ac.id/">Kelompok 8 3SI2</a>
         </div>
       </div>
-  </footer>
+    </footer>
 
     <!-- Scroll Top -->
     <a
