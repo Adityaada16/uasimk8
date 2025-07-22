@@ -42,54 +42,54 @@
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
 
-     <style>
-    /* Custom styling for specialty icons */
-    .specialty-icon {
-      font-size: 3rem;
-      color: var(--accent-color);
-      margin-bottom: 20px;
-      display: flex;
-      justify-content: center;
-    }
-    
-    .specialty-card {
-      transition: transform 0.3s ease;
-      height: 100%;
-    }
-    
-    .specialty-card:hover {
-      transform: translateY(-5px);
-    }
-    
-    .specialty-card .card-body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
+    <style>
+      /* Custom styling for specialty icons */
+      .specialty-icon {
+        font-size: 3rem;
+        color: var(--accent-color);
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+      }
 
-    .btn-view-all {
-  display: inline-block;
-  background: transparent;
-  color: var(--accent-color);
-  border: 2px solid var(--accent-color);
-  padding: 15px 40px;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 16px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
+      .specialty-card {
+        transition: transform 0.3s ease;
+        height: 100%;
+      }
 
-.btn-view-all:hover {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 60%);
-}
-  </style>
+      .specialty-card:hover {
+        transform: translateY(-5px);
+      }
 
-  
+      .specialty-card .card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .btn-view-all {
+        display: inline-block;
+        background: transparent;
+        color: var(--accent-color);
+        border: 2px solid var(--accent-color);
+        padding: 15px 40px;
+        border-radius: 30px;
+        font-weight: 600;
+        font-size: 16px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .btn-view-all:hover {
+        background: var(--accent-color);
+        color: var(--contrast-color);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px
+          color-mix(in srgb, var(--accent-color), transparent 60%);
+      }
+    </style>
+
     <!-- =======================================================
   * Template Name: MediTrust
   * Template URL: https://bootstrapmade.com/meditrust-bootstrap-hospital-website-template/
@@ -230,7 +230,7 @@
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="beranda.html" class="active">Beranda</a></li>
+            <li><a href="beranda.html">Beranda</a></li>
             <li class="dropdown">
               <a href="#"
                 ><span>Tentang Kami</span>
@@ -271,7 +271,7 @@
                 <li><a href="fasilitas.html">Fasilitas</a></li>
               </ul>
             </li>
-            <li class="dropdown">
+            <li class="dropdown" class="active">
               <a href="#"
                 ><span>Jadwal Dokter</span>
                 <i class="bi bi-chevron-down toggle-dropdown"></i
@@ -282,7 +282,9 @@
                   <a href="jadwalKencana.html">Jadwal Dokter RSCM Kencana</a>
                 </li>
                 <li>
-                  <a href="jadwalTele.html">Jadwal Telekonsultasi Dokter RSCM Kencana</a>
+                  <a href="jadwalTele.html"
+                    >Jadwal Telekonsultasi Dokter RSCM Kencana</a
+                  >
                 </li>
               </ul>
             </li>
@@ -322,9 +324,9 @@
                 <i class="bi bi-chevron-down toggle-dropdown"></i
               ></a>
               <ul>
-                <li><a href="#">Karir</a></li>
+                <li><a href="karir.html">Karir</a></li>
                 <li><a href="informasi-publik.html">Informasi Publik</a></li>
-                <li><a href="#">Rujukan Nasional</a></li>
+                <li><a href="rujukan-nasional.html">Rujukan Nasional</a></li>
               </ul>
             </li>
             <li><a href="bantuan.html">Bantuan</a></li>
@@ -334,316 +336,443 @@
       </div>
     </header>
 
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title">
-      <div class="breadcrumbs">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="beranda.html"><i class="bi bi-house"></i> Beranda</a></li>
-            <li class="breadcrumb-item"><a href="beranda.html">Jadwal Dokter</a></li>
-            <li class="breadcrumb-item active current">Jadwal Dokter RSCM Kencana</li>
-          </ol>
-        </nav>
-      </div>
-
-      <div class="title-wrapper">
-        <h1>Spesialisasi</h1>
-        <p>Pilih bidang spesialis yang ingin dicari. </p>
-      </div>
-    </div><!-- End Page Title -->
-
-    <!-- Specialties Section -->
-    <section id="specialties" class="specialties section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-          
-    <!-- Spesialis Akupuntur -->
-<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-  <div class="card specialty-card h-100">
-    <div class="card-body">
-      <div class="specialty-icon">
-        <i class="fas fa-syringe"></i>
-      </div>
-      <h4 class="card-title">Spesialis Akupuntur</h4>
-      <a href="dokterKencana.html" class="btn btn-view-all">Lihat Dokter</a>
-    </div>
-  </div>
-</div>
-
-<!-- Spesialis Anak -->
-<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-  <div class="card specialty-card h-100">
-    <div class="card-body">
-      <div class="specialty-icon">
-        <i class="fas fa-child"></i>
-      </div>
-      <h4 class="card-title">Spesialis Anak</h4>
-      <a href="dokterKencana.html" class="btn btn-view-all">Lihat Dokter</a>
-    </div>
-  </div>
-</div>
-
-<!-- Spesialis Bedah -->
-<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-  <div class="card specialty-card h-100">
-    <div class="card-body">
-      <div class="specialty-icon">
-        <i class="fas fa-scissors"></i>
-      </div>
-      <h4 class="card-title">Spesialis Bedah</h4>
-      <a href="dokterKencana.html" class="btn btn-view-all">Lihat Dokter</a>
-    </div>
-  </div>
-</div>
-
-<!-- Spesialis Bedah Saraf -->
-<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-  <div class="card specialty-card h-100">
-    <div class="card-body">
-      <div class="specialty-icon">
-        <i class="fas fa-brain"></i>
-      </div>
-      <h4 class="card-title">Spesialis Bedah Saraf</h4>
-      <a href="dokterKencana.html" class="btn btn-view-all">Lihat Dokter</a>
-    </div>
-  </div>
-</div>
-
-<!-- Spesialis Gigi dan Mulut -->
-<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-  <div class="card specialty-card h-100">
-    <div class="card-body">
-      <div class="specialty-icon">
-        <i class="fas fa-tooth"></i>
-      </div>
-      <h4 class="card-title">Spesialis Gigi dan Mulut</h4>
-      <a href="dokterKencana.html" class="btn btn-view-all">Lihat Dokter</a>
-    </div>
-  </div>
-</div>
-
-<!-- Spesialis Gizi Klinik -->
-<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-  <div class="card specialty-card h-100">
-    <div class="card-body">
-      <div class="specialty-icon">
-        <i class="fas fa-apple-alt"></i>
-      </div>
-      <h4 class="card-title">Spesialis Gizi Klinik</h4>
-      <a href="dokterKencana.html" class="btn btn-view-all">Lihat Dokter</a>
-    </div>
-  </div>
-</div>
-
-<!-- Spesialis Kulit & Kelamin -->
-<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-  <div class="card specialty-card h-100">
-    <div class="card-body">
-      <div class="specialty-icon">
-        <i class="fas fa-capsules"></i>
-      </div>
-      <h4 class="card-title">Spesialis Kulit & Kelamin</h4>
-      <a href="dokterKencana.html" class="btn btn-view-all">Lihat Dokter</a>
-    </div>
-  </div>
-</div>
-
-<!-- Spesialis Kebidanan dan Penyakit Kandungan -->
-<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-  <div class="card specialty-card h-100">
-    <div class="card-body">
-      <div class="specialty-icon">
-        <i class="fas fa-female"></i>
-      </div>
-      <h4 class="card-title">Spesialis Kebidanan & Kandungan</h4>
-      <a href="dokterKencana.html" class="btn btn-view-all">Lihat Dokter</a>
-    </div>
-  </div>
-</div>
-
-<!-- Spesialis Kedokteran Nuklir -->
-<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-  <div class="card specialty-card h-100">
-    <div class="card-body">
-      <div class="specialty-icon">
-        <i class="fa-solid fa-radiation"></i>
-      </div>
-      <h4 class="card-title">Spesialis Kedokteran Nuklir</h4>
-      <a href="dokterKencana.html" class="btn btn-view-all">Lihat Dokter</a>
-    </div>
-  </div>
-</div>
-
-<!-- Spesialis Mata -->
-<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-  <div class="card specialty-card h-100">
-    <div class="card-body">
-      <div class="specialty-icon">
-        <i class="fas fa-eye"></i>
-      </div>
-      <h4 class="card-title">Spesialis Mata</h4>
-      <a href="dokterKencana.html" class="btn btn-view-all">Lihat Dokter</a>
-    </div>
-  </div>
-</div>
-
-<!-- Spesialis Orthopaedi & Traumatologi -->
-<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-  <div class="card specialty-card h-100">
-    <div class="card-body">
-      <div class="specialty-icon">
-        <i class="fas fa-bone"></i>
-      </div>
-      <h4 class="card-title">Spesialis Orthopaedi & Traumatologi</h4>
-      <a href="dokterKencana.html" class="btn btn-view-all">Lihat Dokter</a>
-    </div>
-  </div>
-</div>
-
-<!-- Spesialis Penyakit Dalam -->
-<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-  <div class="card specialty-card h-100">
-    <div class="card-body">
-      <div class="specialty-icon">
-        <i class="fas fa-heart"></i>
-      </div>
-      <h4 class="card-title">Spesialis Penyakit Dalam</h4>
-      <a href="dokterKencana.html" class="btn btn-view-all">Lihat Dokter</a>
-    </div>
-  </div>
-</div>
-
-<!-- Spesialis Psikiatri -->
-<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-  <div class="card specialty-card h-100">
-    <div class="card-body">
-      <div class="specialty-icon">
-        <i class="fa-solid fa-face-frown"></i>
-      </div>
-      <h4 class="card-title">Spesialis Psikiatri</h4>
-      <a href="dokterKencana.html" class="btn btn-view-all">Lihat Dokter</a>
-    </div>
-  </div>
-</div>
-
-<!-- Spesialis Radiologi -->
-<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-  <div class="card specialty-card h-100">
-    <div class="card-body">
-      <div class="specialty-icon">
-        <i class="fas fa-camera"></i>
-      </div>
-      <h4 class="card-title">Spesialis Radiologi</h4>
-      <a href="dokterKencana.html" class="btn btn-view-all">Lihat Dokter</a>
-    </div>
-  </div>
-</div>
-
-<!-- Spesialis Rehabilitasi Medik -->
-<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-  <div class="card specialty-card h-100">
-    <div class="card-body">
-      <div class="specialty-icon">
-        <i class="fas fa-wheelchair"></i>
-      </div>
-      <h4 class="card-title">Spesialis Rehabilitasi Medik</h4>
-      <a href="dokterKencana.html" class="btn btn-view-all">Lihat Dokter</a>
-    </div>
-  </div>
-</div>
-
-<!-- Spesialis Syaraf -->
-<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-  <div class="card specialty-card h-100">
-    <div class="card-body">
-      <div class="specialty-icon">
-        <i class="fas fa-cogs"></i>
-      </div>
-      <h4 class="card-title">Spesialis Syaraf</h4>
-      <a href="dokterKencana.html" class="btn btn-view-all">Lihat Dokter</a>
-    </div>
-  </div>
-</div>
-
-<!-- Spesialis THT-KL -->
-<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-  <div class="card specialty-card h-100">
-    <div class="card-body">
-      <div class="specialty-icon">
-        <i class="fas fa-ear-deaf"></i>
-      </div>
-      <h4 class="card-title">Spesialis THT-KL</h4>
-      <a href="dokterKencana.html" class="btn btn-view-all">Lihat Dokter</a>
-    </div>
-  </div>
-</div>
-
-<!-- Spesialis Urologi -->
-<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-  <div class="card specialty-card h-100">
-    <div class="card-body">
-      <div class="specialty-icon">
-        <i class="fas fa-droplet"></i>
-      </div>
-      <h4 class="card-title">Spesialis Urologi</h4>
-      <a href="dokterKencana.html" class="btn btn-view-all">Lihat Dokter</a>
-    </div>
-  </div>
-</div>
-
-<!-- Konsultan Jantung & Pembuluh Darah -->
-<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-  <div class="card specialty-card h-100">
-    <div class="card-body">
-      <div class="specialty-icon">
-        <i class="fas fa-heartbeat"></i>
-      </div>
-      <h4 class="card-title">Konsultan Jantung & Pembuluh Darah</h4>
-      <a href="dokterKencana.html" class="btn btn-view-all">Lihat Dokter</a>
-    </div>
-  </div>
-</div>
-
-<!-- Spesialis Okupasi -->
-<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-  <div class="card specialty-card h-100">
-    <div class="card-body">
-      <div class="specialty-icon">
-        <i class="fas fa-briefcase"></i>
-      </div>
-      <h4 class="card-title">Spesialis Okupasi</h4>
-      <a href="dokterKencana.html" class="btn btn-view-all">Lihat Dokter</a>
-    </div>
-  </div>
-</div>
-
-<!-- Spesialis Onkologi Radiasi -->
-<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-  <div class="card specialty-card h-100">
-    <div class="card-body">
-      <div class="specialty-icon">
-        <i class="fas fa-sun"></i>
-      </div>
-      <h4 class="card-title">Spesialis Onkologi Radiasi</h4>
-      <a href="dokterKencana.html" class="btn btn-view-all">Lihat Dokter</a>
-    </div>
-  </div>
-</div>
-
-
+    <main class="main">
+      <!-- Page Title -->
+      <div class="page-title">
+        <div class="breadcrumbs">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="beranda.html"><i class="bi bi-house"></i> Beranda</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="beranda.html">Jadwal Dokter</a>
+              </li>
+              <li class="breadcrumb-item active current">
+                Jadwal Dokter RSCM Kencana
+              </li>
+            </ol>
+          </nav>
         </div>
 
+        <div class="title-wrapper">
+          <h1>Spesialisasi</h1>
+          <p>Pilih bidang spesialis yang ingin dicari.</p>
+        </div>
       </div>
+      <!-- End Page Title -->
 
-    </section><!-- /Specialties Section -->
+      <!-- Specialties Section -->
+      <section id="specialties" class="specialties section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <!-- Spesialis Akupuntur -->
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="card specialty-card h-100">
+                <div class="card-body">
+                  <div class="specialty-icon">
+                    <i class="fas fa-syringe"></i>
+                  </div>
+                  <h4 class="card-title">Spesialis Akupuntur</h4>
+                  <a href="dokterKencana.html" class="btn btn-view-all"
+                    >Lihat Dokter</a
+                  >
+                </div>
+              </div>
+            </div>
 
-  </main>
+            <!-- Spesialis Anak -->
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="card specialty-card h-100">
+                <div class="card-body">
+                  <div class="specialty-icon">
+                    <i class="fas fa-child"></i>
+                  </div>
+                  <h4 class="card-title">Spesialis Anak</h4>
+                  <a href="dokterKencana.html" class="btn btn-view-all"
+                    >Lihat Dokter</a
+                  >
+                </div>
+              </div>
+            </div>
 
-   <footer id="footer" class="footer position-relative light-background">
+            <!-- Spesialis Bedah -->
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="card specialty-card h-100">
+                <div class="card-body">
+                  <div class="specialty-icon">
+                    <i class="fas fa-scissors"></i>
+                  </div>
+                  <h4 class="card-title">Spesialis Bedah</h4>
+                  <a href="dokterKencana.html" class="btn btn-view-all"
+                    >Lihat Dokter</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Spesialis Bedah Saraf -->
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="card specialty-card h-100">
+                <div class="card-body">
+                  <div class="specialty-icon">
+                    <i class="fas fa-brain"></i>
+                  </div>
+                  <h4 class="card-title">Spesialis Bedah Saraf</h4>
+                  <a href="dokterKencana.html" class="btn btn-view-all"
+                    >Lihat Dokter</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Spesialis Gigi dan Mulut -->
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="card specialty-card h-100">
+                <div class="card-body">
+                  <div class="specialty-icon">
+                    <i class="fas fa-tooth"></i>
+                  </div>
+                  <h4 class="card-title">Spesialis Gigi dan Mulut</h4>
+                  <a href="dokterKencana.html" class="btn btn-view-all"
+                    >Lihat Dokter</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Spesialis Gizi Klinik -->
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="card specialty-card h-100">
+                <div class="card-body">
+                  <div class="specialty-icon">
+                    <i class="fas fa-apple-alt"></i>
+                  </div>
+                  <h4 class="card-title">Spesialis Gizi Klinik</h4>
+                  <a href="dokterKencana.html" class="btn btn-view-all"
+                    >Lihat Dokter</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Spesialis Kulit & Kelamin -->
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="card specialty-card h-100">
+                <div class="card-body">
+                  <div class="specialty-icon">
+                    <i class="fas fa-capsules"></i>
+                  </div>
+                  <h4 class="card-title">Spesialis Kulit & Kelamin</h4>
+                  <a href="dokterKencana.html" class="btn btn-view-all"
+                    >Lihat Dokter</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Spesialis Kebidanan dan Penyakit Kandungan -->
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="card specialty-card h-100">
+                <div class="card-body">
+                  <div class="specialty-icon">
+                    <i class="fas fa-female"></i>
+                  </div>
+                  <h4 class="card-title">Spesialis Kebidanan & Kandungan</h4>
+                  <a href="dokterKencana.html" class="btn btn-view-all"
+                    >Lihat Dokter</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Spesialis Kedokteran Nuklir -->
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="card specialty-card h-100">
+                <div class="card-body">
+                  <div class="specialty-icon">
+                    <i class="fa-solid fa-radiation"></i>
+                  </div>
+                  <h4 class="card-title">Spesialis Kedokteran Nuklir</h4>
+                  <a href="dokterKencana.html" class="btn btn-view-all"
+                    >Lihat Dokter</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Spesialis Mata -->
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="card specialty-card h-100">
+                <div class="card-body">
+                  <div class="specialty-icon">
+                    <i class="fas fa-eye"></i>
+                  </div>
+                  <h4 class="card-title">Spesialis Mata</h4>
+                  <a href="dokterKencana.html" class="btn btn-view-all"
+                    >Lihat Dokter</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Spesialis Orthopaedi & Traumatologi -->
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="card specialty-card h-100">
+                <div class="card-body">
+                  <div class="specialty-icon">
+                    <i class="fas fa-bone"></i>
+                  </div>
+                  <h4 class="card-title">
+                    Spesialis Orthopaedi & Traumatologi
+                  </h4>
+                  <a href="dokterKencana.html" class="btn btn-view-all"
+                    >Lihat Dokter</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Spesialis Penyakit Dalam -->
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="card specialty-card h-100">
+                <div class="card-body">
+                  <div class="specialty-icon">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                  <h4 class="card-title">Spesialis Penyakit Dalam</h4>
+                  <a href="dokterKencana.html" class="btn btn-view-all"
+                    >Lihat Dokter</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Spesialis Psikiatri -->
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="card specialty-card h-100">
+                <div class="card-body">
+                  <div class="specialty-icon">
+                    <i class="fa-solid fa-face-frown"></i>
+                  </div>
+                  <h4 class="card-title">Spesialis Psikiatri</h4>
+                  <a href="dokterKencana.html" class="btn btn-view-all"
+                    >Lihat Dokter</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Spesialis Radiologi -->
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="card specialty-card h-100">
+                <div class="card-body">
+                  <div class="specialty-icon">
+                    <i class="fas fa-camera"></i>
+                  </div>
+                  <h4 class="card-title">Spesialis Radiologi</h4>
+                  <a href="dokterKencana.html" class="btn btn-view-all"
+                    >Lihat Dokter</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Spesialis Rehabilitasi Medik -->
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="card specialty-card h-100">
+                <div class="card-body">
+                  <div class="specialty-icon">
+                    <i class="fas fa-wheelchair"></i>
+                  </div>
+                  <h4 class="card-title">Spesialis Rehabilitasi Medik</h4>
+                  <a href="dokterKencana.html" class="btn btn-view-all"
+                    >Lihat Dokter</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Spesialis Syaraf -->
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="card specialty-card h-100">
+                <div class="card-body">
+                  <div class="specialty-icon">
+                    <i class="fas fa-cogs"></i>
+                  </div>
+                  <h4 class="card-title">Spesialis Syaraf</h4>
+                  <a href="dokterKencana.html" class="btn btn-view-all"
+                    >Lihat Dokter</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Spesialis THT-KL -->
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="card specialty-card h-100">
+                <div class="card-body">
+                  <div class="specialty-icon">
+                    <i class="fas fa-ear-deaf"></i>
+                  </div>
+                  <h4 class="card-title">Spesialis THT-KL</h4>
+                  <a href="dokterKencana.html" class="btn btn-view-all"
+                    >Lihat Dokter</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Spesialis Urologi -->
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="card specialty-card h-100">
+                <div class="card-body">
+                  <div class="specialty-icon">
+                    <i class="fas fa-droplet"></i>
+                  </div>
+                  <h4 class="card-title">Spesialis Urologi</h4>
+                  <a href="dokterKencana.html" class="btn btn-view-all"
+                    >Lihat Dokter</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Konsultan Jantung & Pembuluh Darah -->
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="card specialty-card h-100">
+                <div class="card-body">
+                  <div class="specialty-icon">
+                    <i class="fas fa-heartbeat"></i>
+                  </div>
+                  <h4 class="card-title">Konsultan Jantung & Pembuluh Darah</h4>
+                  <a href="dokterKencana.html" class="btn btn-view-all"
+                    >Lihat Dokter</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Spesialis Okupasi -->
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="card specialty-card h-100">
+                <div class="card-body">
+                  <div class="specialty-icon">
+                    <i class="fas fa-briefcase"></i>
+                  </div>
+                  <h4 class="card-title">Spesialis Okupasi</h4>
+                  <a href="dokterKencana.html" class="btn btn-view-all"
+                    >Lihat Dokter</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Spesialis Onkologi Radiasi -->
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="card specialty-card h-100">
+                <div class="card-body">
+                  <div class="specialty-icon">
+                    <i class="fas fa-sun"></i>
+                  </div>
+                  <h4 class="card-title">Spesialis Onkologi Radiasi</h4>
+                  <a href="dokterKencana.html" class="btn btn-view-all"
+                    >Lihat Dokter</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Specialties Section -->
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
       <div class="container footer-top">
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6 footer-about">
@@ -702,9 +831,9 @@
           <div class="col-lg-2 col-md-3 footer-links">
             <h4>Kebijakan dan Ketentuan</h4>
             <ul>
-              <li><a href="#">Kebijakan Privasi dari SDM</a></li>
-              <li><a href="#">Kebijakan Privasi RSCMku</a></li>
-              <li><a href="#">Syarat dan Ketentuan</a></li>
+              <li><a href="404.html">Kebijakan Privasi dari SDM</a></li>
+              <li><a href="404.html">Kebijakan Privasi RSCMku</a></li>
+              <li><a href="404.html">Syarat dan Ketentuan</a></li>
             </ul>
           </div>
 
