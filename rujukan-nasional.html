@@ -43,82 +43,98 @@
     <link href="assets/css/main.css" rel="stylesheet" />
 
     <style>
-        /* CSS untuk center ikon dan layout yang konsisten */
-       /* CSS untuk center ikon dan hover effect */
-    /* CSS untuk override styling existing dan fix center + hover effect */
+      /* CSS untuk center ikon dan layout yang konsisten */
+      /* CSS untuk center ikon dan hover effect */
+      /* CSS untuk override styling existing dan fix center + hover effect */
 
-/* Reset styling service-item yang mungkin ada background biru */
-    .services .service-item {
+      /* Reset styling service-item yang mungkin ada background biru */
+      .services .service-item {
         background: transparent !important;
         border: 1px solid #e0e0e0 !important;
         transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-    }
+      }
 
-    .services .service-item:hover {
+      .services .service-item:hover {
         background: transparent !important;
         transform: translateY(-5px) !important;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.1) !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
         border-color: #ddd !important;
-    }
+      }
 
-    /* CSS untuk center ikon dan hover effect */
-    .services .service-icon-wrapper {
+      /* CSS untuk center ikon dan hover effect */
+      .services .service-icon-wrapper {
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
         height: 80px !important;
         width: 100% !important;
         background: transparent !important;
-    }
+      }
 
-    .services .service-icon-wrapper img,
-    .services .service-icon {
+      .services .service-icon-wrapper img,
+      .services .service-icon {
         max-height: 60px !important;
         max-width: 60px !important;
         object-fit: contain !important;
         transition: transform 0.3s ease !important;
         display: block !important;
         margin: 0 auto !important;
-    }
+      }
 
-    /* Hover effect - gambar membesar */
-    .services .service-item:hover .service-icon-wrapper img,
-    .services .service-item:hover .service-icon {
+      /* Hover effect - gambar membesar */
+      .services .service-item:hover .service-icon-wrapper img,
+      .services .service-item:hover .service-icon {
         transform: scale(1.2) !important;
-    }
+      }
 
-    /* Hover effect untuk FontAwesome icons */
-    .services .service-icon-wrapper i {
+      /* Hover effect untuk FontAwesome icons */
+      .services .service-icon-wrapper i {
         transition: transform 0.3s ease !important;
-        color: color-mix(in srgb, var(--accent-color), transparent 25%) !important;
-    }
+        color: color-mix(
+          in srgb,
+          var(--accent-color),
+          transparent 25%
+        ) !important;
+      }
 
-    .services .service-item:hover .service-icon-wrapper i {
+      .services .service-item:hover .service-icon-wrapper i {
         transform: scale(1.2) !important;
-        color: color-mix(in srgb, var(--accent-color), transparent 25%) !important;
-    }
+        color: color-mix(
+          in srgb,
+          var(--accent-color),
+          transparent 25%
+        ) !important;
+      }
 
-    /* Pastikan tidak ada overlay atau pseudo element yang mengganggu */
-    .services .service-item::before,
-    .services .service-item::after {
+      /* Pastikan tidak ada overlay atau pseudo element yang mengganggu */
+      .services .service-item::before,
+      .services .service-item::after {
         display: none !important;
-    }
+      }
 
-    /* Fix untuk service-link styling */
-    .services .service-link {
-        color: color-mix(in srgb, var(--accent-color), transparent 25%) !important;
+      /* Fix untuk service-link styling */
+      .services .service-link {
+        color: color-mix(
+          in srgb,
+          var(--accent-color),
+          transparent 25%
+        ) !important;
         text-decoration: none !important;
         font-weight: 500 !important;
-    }
+      }
 
-    .services .service-link:hover {
-        color: color-mix(in srgb, var(--accent-color), transparent 0%) !important;
-    }
+      .services .service-link:hover {
+        color: color-mix(
+          in srgb,
+          var(--accent-color),
+          transparent 0%
+        ) !important;
+      }
 
-    /* Pastikan wrapper tidak memiliki background */
-    .services .service-details {
+      /* Pastikan wrapper tidak memiliki background */
+      .services .service-details {
         background: transparent !important;
-    }
+      }
     </style>
 
     <!-- =======================================================
@@ -263,7 +279,7 @@
           <ul>
             <li><a href="beranda.html">Beranda</a></li>
             <li class="dropdown">
-              <a href="#" class="active"
+              <a href="#"
                 ><span>Tentang Kami</span>
                 <i class="bi bi-chevron-down toggle-dropdown"></i
               ></a>
@@ -308,12 +324,14 @@
                 <i class="bi bi-chevron-down toggle-dropdown"></i
               ></a>
               <ul>
-                <li><a href="#.html">Jadwal Dokter RSCM</a></li>
+                <li><a href="jadwalRSCM.html">Jadwal Dokter RSCM</a></li>
                 <li>
-                  <a href="#.html">Jadwal Dokter RSCM Kencana</a>
+                  <a href="jadwalKencana.html">Jadwal Dokter RSCM Kencana</a>
                 </li>
                 <li>
-                  <a href="#.html">Jadwal Terkonsultasi Dokter RSCM Kencana</a>
+                  <a href="jadwalTele.html"
+                    >Jadwal Telekonsultasi Dokter RSCM Kencana</a
+                  >
                 </li>
               </ul>
             </li>
@@ -347,15 +365,15 @@
                 </li>
               </ul>
             </li>
-            <li class="dropdown">
+            <li class="dropdown" class="active">
               <a href="#"
                 ><span>Informasi Lain</span>
                 <i class="bi bi-chevron-down toggle-dropdown"></i
               ></a>
               <ul>
-                <li><a href="#">Karir</a></li>
+                <li><a href="karir.html">Karir</a></li>
                 <li><a href="informasi-publik.html">Informasi Publik</a></li>
-                <li><a href="#">Rujukan Nasional</a></li>
+                <li><a href="rujukan-nasional.html">Rujukan Nasional</a></li>
               </ul>
             </li>
             <li><a href="bantuan.html">Bantuan</a></li>
@@ -365,249 +383,307 @@
       </div>
     </header>
 
-   <main class="main">
-  <!-- Page Title -->
-  <div class="page-title">
-    <div class="breadcrumbs">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="beranda.html"><i class="bi bi-house"></i> Beranda</a>
-          </li>
-          <li class="breadcrumb-item"><a href="#">Informasi Lain</a></li>
-          <li class="breadcrumb-item active" aria-current="page">
-            Rujukan Nasional
-          </li>
-        </ol>
-      </nav>
-    </div>
-  </div>
-
-  <section id="services" class="services section">
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-      <!-- Judul dan Penjelasan -->
-      <div class="text-center mb-5">
-        <h1>Layanan Rujukan Nasional</h1>
-        <p>Laman ini diperuntukkan bagi para klinisi yang akan merujuk ke pelayanan rujukan nasional.</p>
-        <p>Berikut adalah layanan rujukan nasional RSCM.</p>
+    <main class="main">
+      <!-- Page Title -->
+      <div class="page-title">
+        <div class="breadcrumbs">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="beranda.html"><i class="bi bi-house"></i> Beranda</a>
+              </li>
+              <li class="breadcrumb-item"><a href="#">Informasi Lain</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Rujukan Nasional
+              </li>
+            </ol>
+          </nav>
+        </div>
       </div>
 
-      <!-- Card Layout - 4 per baris -->
-      <div class="row g-4">
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-          <div class="service-item text-center">
-            <div class="service-icon-wrapper mb-3">
-              <img src="assets/img/logo/geriatri.png" alt="Ikon Geriatri" class="service-icon">
+      <section id="services" class="services section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <!-- Judul dan Penjelasan -->
+          <div class="text-center mb-5">
+            <h1>Layanan Rujukan Nasional</h1>
+            <p>
+              Laman ini diperuntukkan bagi para klinisi yang akan merujuk ke
+              pelayanan rujukan nasional.
+            </p>
+            <p>Berikut adalah layanan rujukan nasional RSCM.</p>
+          </div>
+
+          <!-- Card Layout - 4 per baris -->
+          <div class="row g-4">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="service-item text-center">
+                <div class="service-icon-wrapper mb-3">
+                  <img
+                    src="assets/img/logo/geriatri.png"
+                    alt="Ikon Geriatri"
+                    class="service-icon"
+                  />
+                </div>
+                <div class="service-details">
+                  <h5>Pelayanan Geriatri Terpadu</h5>
+                  <a href="404.html" class="service-link d-block mt-2">
+                    <span>Selengkapnya</span>
+                    <i class="fa fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="service-details">
-              <h5>Pelayanan Geriatri Terpadu</h5>
-              <a href="404.html" class="service-link d-block mt-2">
-                <span>Selengkapnya</span>
-                <i class="fa fa-arrow-right ms-1"></i>
-              </a>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="service-item text-center">
+                <div class="service-icon-wrapper mb-3">
+                  <img
+                    src="assets/img/logo/ginjal.png"
+                    alt="Ikon Ginjal"
+                    class="service-icon"
+                  />
+                </div>
+                <div class="service-details">
+                  <h5>Transplantasi Ginjal</h5>
+                  <a href="404.html" class="service-link d-block mt-2">
+                    <span>Selengkapnya</span>
+                    <i class="fa fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="service-item text-center">
+                <div class="service-icon-wrapper mb-3">
+                  <img
+                    src="assets/img/logo/neonatologi.png"
+                    alt="Ikon Neonatologi"
+                    class="service-icon"
+                  />
+                </div>
+                <div class="service-details">
+                  <h5>Pelayanan Neonatologi</h5>
+                  <a href="404.html" class="service-link d-block mt-2">
+                    <span>Selengkapnya</span>
+                    <i class="fa fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="service-item text-center">
+                <div class="service-icon-wrapper mb-3">
+                  <img
+                    src="assets/img/logo/ivf.png"
+                    alt="Ikon IVF"
+                    class="service-icon"
+                  />
+                </div>
+                <div class="service-details">
+                  <h5>In-Vitro Fertilization (IVF)</h5>
+                  <a href="404.html" class="service-link d-block mt-2">
+                    <span>Selengkapnya</span>
+                    <i class="fa fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="service-item text-center">
+                <div class="service-icon-wrapper mb-3">
+                  <img
+                    src="assets/img/logo/cochlear.png"
+                    alt="Ikon Cochlear"
+                    class="service-icon"
+                  />
+                </div>
+                <div class="service-details">
+                  <h5>Implant Cochlear</h5>
+                  <a href="404.html" class="service-link d-block mt-2">
+                    <span>Selengkapnya</span>
+                    <i class="fa fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="service-item text-center">
+                <div class="service-icon-wrapper mb-3">
+                  <img
+                    src="assets/img/logo/hati.png"
+                    alt="Ikon Hati"
+                    class="service-icon"
+                  />
+                </div>
+                <div class="service-details">
+                  <h5>Transplantasi Hati</h5>
+                  <a href="404.html" class="service-link d-block mt-2">
+                    <span>Selengkapnya</span>
+                    <i class="fa fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="service-item text-center">
+                <div class="service-icon-wrapper mb-3">
+                  <img
+                    src="assets/img/logo/jantung.png"
+                    alt="Ikon Jantung"
+                    class="service-icon"
+                  />
+                </div>
+                <div class="service-details">
+                  <h5>Pelayanan Jantung Terpadu</h5>
+                  <a href="404.html" class="service-link d-block mt-2">
+                    <span>Selengkapnya</span>
+                    <i class="fa fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="service-item text-center">
+                <div class="service-icon-wrapper mb-3">
+                  <img
+                    src="assets/img/logo/stroke.png"
+                    alt="Ikon Stroke"
+                    class="service-icon"
+                  />
+                </div>
+                <div class="service-details">
+                  <h5>Pelayanan Stroke Terpadu</h5>
+                  <a href="404.html" class="service-link d-block mt-2">
+                    <span>Selengkapnya</span>
+                    <i class="fa fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="service-item text-center">
+                <div class="service-icon-wrapper mb-3">
+                  <img
+                    src="assets/img/logo/retina.png"
+                    alt="Ikon Retina"
+                    class="service-icon"
+                  />
+                </div>
+                <div class="service-details">
+                  <h5>Pelayanan Retina</h5>
+                  <a href="404.html" class="service-link d-block mt-2">
+                    <span>Selengkapnya</span>
+                    <i class="fa fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="service-item text-center">
+                <div class="service-icon-wrapper mb-3">
+                  <img
+                    src="assets/img/logo/tomoterapy.png"
+                    alt="Ikon Tomoteraphy"
+                    class="service-icon"
+                  />
+                </div>
+                <div class="service-details">
+                  <h5>Tomotherapy</h5>
+                  <a href="404.html" class="service-link d-block mt-2">
+                    <span>Selengkapnya</span>
+                    <i class="fa fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="service-item text-center">
+                <div class="service-icon-wrapper mb-3">
+                  <img
+                    src="assets/img/logo/rare_disease.png"
+                    alt="Ikon Rare"
+                    class="service-icon"
+                  />
+                </div>
+                <div class="service-details">
+                  <h5>Pelayanan Penyakit Langka (Rare Disease)</h5>
+                  <a href="404.html" class="service-link d-block mt-2">
+                    <span>Selengkapnya</span>
+                    <i class="fa fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="service-item text-center">
+                <div class="service-icon-wrapper mb-3">
+                  <img
+                    src="assets/img/logo/imrt.jpg"
+                    alt="Ikon IMRT"
+                    class="service-icon"
+                  />
+                </div>
+                <div class="service-details">
+                  <h5>Intensity Modulated Radiation Therapy (IMRT)</h5>
+                  <a href="404.html" class="service-link d-block mt-2">
+                    <span>Selengkapnya</span>
+                    <i class="fa fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="service-item text-center">
+                <div class="service-icon-wrapper mb-3">
+                  <img
+                    src="assets/img/logo/gammaknife.jpg"
+                    alt="Ikon Gamma"
+                    class="service-icon"
+                  />
+                </div>
+                <div class="service-details">
+                  <h5>Pelayanan Gamma Knife</h5>
+                  <a href="404.html" class="service-link d-block mt-2">
+                    <span>Selengkapnya</span>
+                    <i class="fa fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="service-item text-center">
+                <div class="service-icon-wrapper mb-3">
+                  <img
+                    src="assets/img/logo/siam.png"
+                    alt="Ikon Siam"
+                    class="service-icon"
+                  />
+                </div>
+                <div class="service-details">
+                  <h5>Pemisahan Bayi Kembar Siam</h5>
+                  <a href="404.html" class="service-link d-block mt-2">
+                    <span>Selengkapnya</span>
+                    <i class="fa fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-          <div class="service-item text-center">
-            <div class="service-icon-wrapper mb-3">
-              <img src="assets/img/logo/ginjal.png" alt="Ikon Ginjal" class="service-icon">
-            </div>
-            <div class="service-details">
-              <h5>Transplantasi Ginjal</h5>
-              <a href="404.html" class="service-link d-block mt-2">
-                <span>Selengkapnya</span>
-                <i class="fa fa-arrow-right ms-1"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-          <div class="service-item text-center">
-            <div class="service-icon-wrapper mb-3">
-              <img src="assets/img/logo/neonatologi.png" alt="Ikon Neonatologi" class="service-icon">
-            </div>
-            <div class="service-details">
-              <h5>Pelayanan Neonatologi</h5>
-              <a href="404.html" class="service-link d-block mt-2">
-                <span>Selengkapnya</span>
-                <i class="fa fa-arrow-right ms-1"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-          <div class="service-item text-center">
-            <div class="service-icon-wrapper mb-3">
-              <img src="assets/img/logo/ivf.png" alt="Ikon IVF" class="service-icon">
-            </div>
-            <div class="service-details">
-              <h5>In-Vitro Fertilization (IVF)</h5>
-              <a href="404.html" class="service-link d-block mt-2">
-                <span>Selengkapnya</span>
-                <i class="fa fa-arrow-right ms-1"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-          <div class="service-item text-center">
-            <div class="service-icon-wrapper mb-3">
-              <img src="assets/img/logo/cochlear.png" alt="Ikon Cochlear" class="service-icon">
-            </div>
-            <div class="service-details">
-              <h5>Implant Cochlear</h5>
-              <a href="404.html" class="service-link d-block mt-2">
-                <span>Selengkapnya</span>
-                <i class="fa fa-arrow-right ms-1"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-          <div class="service-item text-center">
-            <div class="service-icon-wrapper mb-3">
-              <img src="assets/img/logo/hati.png" alt="Ikon Hati" class="service-icon">
-            </div>
-            <div class="service-details">
-              <h5>Transplantasi Hati</h5>
-              <a href="404.html" class="service-link d-block mt-2">
-                <span>Selengkapnya</span>
-                <i class="fa fa-arrow-right ms-1"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-          <div class="service-item text-center">
-            <div class="service-icon-wrapper mb-3">
-              <img src="assets/img/logo/jantung.png" alt="Ikon Jantung" class="service-icon">
-            </div>
-            <div class="service-details">
-              <h5>Pelayanan Jantung Terpadu</h5>
-              <a href="404.html" class="service-link d-block mt-2">
-                <span>Selengkapnya</span>
-                <i class="fa fa-arrow-right ms-1"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-          <div class="service-item text-center">
-            <div class="service-icon-wrapper mb-3">
-              <img src="assets/img/logo/stroke.png" alt="Ikon Stroke" class="service-icon">
-            </div>
-            <div class="service-details">
-              <h5>Pelayanan Stroke Terpadu</h5>
-              <a href="404.html" class="service-link d-block mt-2">
-                <span>Selengkapnya</span>
-                <i class="fa fa-arrow-right ms-1"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-          <div class="service-item text-center">
-            <div class="service-icon-wrapper mb-3">
-              <img src="assets/img/logo/retina.png" alt="Ikon Retina" class="service-icon">
-            </div>
-            <div class="service-details">
-              <h5>Pelayanan Retina</h5>
-              <a href="404.html" class="service-link d-block mt-2">
-                <span>Selengkapnya</span>
-                <i class="fa fa-arrow-right ms-1"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-          <div class="service-item text-center">
-            <div class="service-icon-wrapper mb-3">
-              <img src="assets/img/logo/tomoterapy.png" alt="Ikon Tomoteraphy" class="service-icon">
-            </div>
-            <div class="service-details">
-              <h5>Tomotherapy</h5>
-              <a href="404.html" class="service-link d-block mt-2">
-                <span>Selengkapnya</span>
-                <i class="fa fa-arrow-right ms-1"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-          <div class="service-item text-center">
-            <div class="service-icon-wrapper mb-3">
-              <img src="assets/img/logo/rare_disease.png" alt="Ikon Rare" class="service-icon">
-            </div>
-            <div class="service-details">
-              <h5>Pelayanan Penyakit Langka (Rare Disease)</h5>
-              <a href="404.html" class="service-link d-block mt-2">
-                <span>Selengkapnya</span>
-                <i class="fa fa-arrow-right ms-1"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-          <div class="service-item text-center">
-            <div class="service-icon-wrapper mb-3">
-              <img src="assets/img/logo/imrt.jpg" alt="Ikon IMRT" class="service-icon">
-            </div>
-            <div class="service-details">
-              <h5>Intensity Modulated Radiation Therapy (IMRT)</h5>
-              <a href="404.html" class="service-link d-block mt-2">
-                <span>Selengkapnya</span>
-                <i class="fa fa-arrow-right ms-1"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-          <div class="service-item text-center">
-            <div class="service-icon-wrapper mb-3">
-              <img src="assets/img/logo/gammaknife.jpg" alt="Ikon Gamma" class="service-icon">
-            </div>
-            <div class="service-details">
-              <h5>Pelayanan Gamma Knife</h5>
-              <a href="404.html" class="service-link d-block mt-2">
-                <span>Selengkapnya</span>
-                <i class="fa fa-arrow-right ms-1"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-          <div class="service-item text-center">
-            <div class="service-icon-wrapper mb-3">
-              <img src="assets/img/logo/siam.png" alt="Ikon Siam" class="service-icon">
-            </div>
-            <div class="service-details">
-              <h5>Pemisahan Bayi Kembar Siam</h5>
-              <a href="404.html" class="service-link d-block mt-2">
-                <span>Selengkapnya</span>
-                <i class="fa fa-arrow-right ms-1"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-</main>
+      </section>
+    </main>
     <footer id="footer" class="footer position-relative light-background">
       <div class="container footer-top">
         <div class="row gy-4">
@@ -667,9 +743,9 @@
           <div class="col-lg-2 col-md-3 footer-links">
             <h4>Kebijakan dan Ketentuan</h4>
             <ul>
-              <li><a href="#">Kebijakan Privasi dari SDM</a></li>
-              <li><a href="#">Kebijakan Privasi RSCMku</a></li>
-              <li><a href="#">Syarat dan Ketentuan</a></li>
+              <li><a href="404.html">Kebijakan Privasi dari SDM</a></li>
+              <li><a href="404.html">Kebijakan Privasi RSCMku</a></li>
+              <li><a href="404.html">Syarat dan Ketentuan</a></li>
             </ul>
           </div>
 
